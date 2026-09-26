@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation & Booking - Ombara Luxury Hotel & Resort</title>
+    <link rel="icon" type="image/png" href="assets/ico.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css//swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading always-show-header page-static">
+
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader-brand">
+            <img src="assets/logo-white.png" alt="Ombara" class="preloader-logo">
+            <div class="preloader-lines"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg header-nav">
+            <div class="container-fluid header-shell">
+                <a class="navbar-brand header-logo" href="index.html">
+                    <img src="assets/logo-black.png" alt="Ombara" height="40" class="logo-dark">
+                    <img src="assets/logo-white.png" alt="Ombara" height="40" class="logo-light">
+                </a>
+                <button class="navbar-toggler header-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavReservasi" aria-controls="navbarNavReservasi" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse header-collapse" id="navbarNavReservasi">
+                    <ul class="navbar-nav header-menu">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link header-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Main Version</a></li>
+                                <li><a class="dropdown-item" href="index_1.html">Dark Version</a></li>
+                                <li><a class="dropdown-item" href="index_2.html">Classic Version</a></li>
+                                <li><a class="dropdown-item" href="index_3.html">Light Version</a></li>
+                                <li><a class="dropdown-item" href="index_4.html">Elrune Style</a></li>
+                                <li><a class="dropdown-item" href="index_5.html">Tulum Style</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="rooms.html">Rooms</a></li>
+                                <li><a class="dropdown-item" href="facilities.html">Facilities</a></li>
+                                <li><a class="dropdown-item" href="offer.html">Offer</a></li>
+                                <li><a class="dropdown-item" href="reservasi.html">Reservation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link header-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="rooms.html">Rooms</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="facilities.html">Facilities</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="offer.html">Offer</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="reservasi.html">Reservation</a></li>
+                    </ul>
+                    <a class="header-register-btn" href="reservasi.html">Register</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="page-hero-media">
+            <img src="assets/image(9).jpg" alt="Ombara reservation">
+        </div>
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <ol class="page-breadcrumb" aria-label="Breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><span class="is-current">Reservation</span></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-overview section-padding">
+        <div class="container">
+            <div class="page-intro reveal" data-reveal="fade-up">
+                <span class="accent-text">Reservation Flow</span>
+                <h2 class="section-title">Simple, Personal, And Guided</h2>
+                <p class="section-subtitle">The Ombara reservation path stays intentionally simple while leaving room for tailored support around room choice, arrival timing, and stay preference.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 reveal" data-reveal="fade-up">
+                    <div class="reservation-panel">
+                        <span class="reservation-step-number">01</span>
+                        <h3>Share Your Stay Details</h3>
+                        <p>Tell us your preferred dates, guest count, and room preference so the team can narrow the best options for you.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal delay-1" data-reveal="fade-up">
+                    <div class="reservation-panel">
+                        <span class="reservation-step-number">02</span>
+                        <h3>Receive Curated Option</h3>
+                        <p>Our reservation desk will send the room or package choices that best fit your pace, budget, and stay intention.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal delay-2" data-reveal="fade-up">
+                    <div class="reservation-panel">
+                        <span class="reservation-step-number">03</span>
+                        <h3>Confirm And Prepare</h3>
+                        <p>Once confirmed, we help finalize arrival notes, special requests, and practical details for a smoother check-in.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register" class="register-section">
+        <div class="register-split">
+            <div class="register-image-pane">
+                <img src="assets/image(9).jpg" alt="Register with Ombara" class="register-img">
+            </div>
+
+            <div class="register-form-pane">
+                <div class="register-inner">
+                    <h2 class="section-title">Reserve Your Stay</h2>
+                    <p class="register-desc">Select your desired dates, preferred suite, and guest count. Your reservation will be directly confirmed and registered in our system.</p>
+
+                    <!-- Real Hotel Reservation Form -->
+                    <form class="register-form booking-form" id="hotelBookingForm" action="booking-submit.php" method="POST" data-form-label="Hotel Room Reservation">
+                        <div class="form-group">
+                            <label for="res-name">Full Name *</label>
+                            <input type="text" id="res-name" name="name" placeholder="e.g. Eleanor Vance" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-email">Email Address *</label>
+                            <input type="email" id="res-email" name="email" placeholder="e.g. eleanor@luxurytravel.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-phone">Phone Number *</label>
+                            <div class="phone-input-wrap">
+                                <select id="res-country-code" name="country_code" aria-label="Country Code">
+                                    <option value="+1">+1 (US/CA)</option>
+                                    <option value="+34">+34 (ES)</option>
+                                    <option value="+52">+52 (MX)</option>
+                                    <option value="+60">+60 (MY)</option>
+                                    <option value="+62" selected>+62 (ID)</option>
+                                    <option value="+65">+65 (SG)</option>
+                                    <option value="+44">+44 (UK)</option>
+                                    <option value="+33">+33 (FR)</option>
+                                </select>
+                                <input type="tel" id="res-phone" name="phone" placeholder="Enter phone number" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-room-type">Room / Suite Category *</label>
+                            <div class="select-wrap">
+                                <select id="res-room-type" name="room_type" required>
+                                    <option value="Ocean View Suite" data-rate="220" selected>Ocean View Suite — $220 / night</option>
+                                    <option value="Garden Villa" data-rate="180">Garden Villa — $180 / night</option>
+                                    <option value="Deluxe King Residence" data-rate="260">Deluxe King Residence — $260 / night</option>
+                                    <option value="Family Residence" data-rate="310">Family Residence — $310 / night</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Check-in & Check-out Date Grid -->
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="res-check-in">Check-in Date *</label>
+                                <input type="date" id="res-check-in" name="check_in" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-check-out">Check-out Date *</label>
+                                <input type="date" id="res-check-out" name="check_out" required>
+                            </div>
+                        </div>
+
+                        <!-- Guests Count Grid -->
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="res-adults">Adults</label>
+                                <input type="number" id="res-adults" name="adults" min="1" max="6" value="2" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-children">Children</label>
+                                <input type="number" id="res-children" name="children" min="0" max="6" value="0">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-requests">Special Requests (Optional)</label>
+                            <textarea id="res-requests" name="special_requests" rows="2" placeholder="e.g. High floor, airport transfer, dietary notes..."></textarea>
+                        </div>
+
+                        <!-- Real-time Stay Cost Summary Box -->
+                        <div class="booking-summary-box" id="bookingSummaryBox">
+                            <div class="booking-summary-header">
+                                <span class="booking-summary-title">Reservation Summary</span>
+                                <span class="booking-summary-badge" id="summaryRoomBadge">Ocean View Suite</span>
+                            </div>
+                            <div class="booking-summary-row">
+                                <span>Duration of Stay:</span>
+                                <strong id="summaryNights">1 Night</strong>
+                            </div>
+                            <div class="booking-summary-row">
+                                <span>Nightly Rate:</span>
+                                <span id="summaryRate">$220 USD</span>
+                            </div>
+                            <div class="booking-summary-total">
+                                <span>Estimated Total:</span>
+                                <span class="total-amount" id="summaryTotal">$220 USD</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group terms-group">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="terms" required>
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">I agree to the <span class="color">Booking Policies & Hotel Terms</span></span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="register-submit-btn" id="btnSubmitBooking">
+                            <i class="fa-solid fa-lock me-1"></i> Confirm & Book Stay
+                        </button>
+                    </form>
+
+                    <!-- Luxury Confirmation Voucher Card (Shown on Success) -->
+                    <div class="booking-voucher-card" id="bookingVoucherCard">
+                        <div class="voucher-header">
+                            <div class="voucher-icon"><i class="fa-solid fa-check"></i></div>
+                            <h3>Reservation Confirmed!</h3>
+                            <p class="text-muted small mb-2">Your stay has been registered directly in our hotel system.</p>
+                            <div class="voucher-code-wrap">
+                                <span class="voucher-code-label">Booking Reference (PNR)</span>
+                                <span class="voucher-code-value" id="voucherCode">OMB-2026-XXXX</span>
+                            </div>
+                        </div>
+                        <div class="voucher-details-grid">
+                            <div class="voucher-detail-item">
+                                <span class="voucher-detail-label">Guest Name</span>
+                                <span class="voucher-detail-value" id="voucherGuest">Eleanor Vance</span>
+                            </div>
+                            <div class="voucher-detail-item">
+                                <span class="voucher-detail-label">Room Type</span>
+                                <span class="voucher-detail-value" id="voucherRoom">Ocean View Suite</span>
+                            </div>
+                            <div class="voucher-detail-item">
+                                <span class="voucher-detail-label">Dates</span>
+                                <span class="voucher-detail-value" id="voucherDates">Oct 12 &rarr; Oct 15</span>
+                            </div>
+                            <div class="voucher-detail-item">
+                                <span class="voucher-detail-label">Total Amount</span>
+                                <span class="voucher-detail-value text-success" id="voucherTotal">$660.00 USD</span>
+                            </div>
+                        </div>
+                        <div class="voucher-actions">
+                            <button type="button" class="btn-voucher-print" onclick="window.print()">
+                                <i class="fa-solid fa-print me-1"></i> Print Confirmation
+                            </button>
+                            <button type="button" class="btn-voucher-reset" id="btnBookAnother">
+                                <i class="fa-solid fa-rotate-left me-1"></i> Book Another
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="journal-section section-padding">
+        <div class="container">
+            <div class="page-intro reveal" data-reveal="fade-up">
+                <span class="accent-text">Journal</span>
+                <h2 class="section-title">A Better Way To Begin The Stay</h2>
+                <p class="section-subtitle">A blog column on reservation clarity, guest expectations, and why the arrival journey matters as much as the room itself.</p>
+            </div>
+            <div class="journal-grid">
+                <div class="journal-card reveal" data-reveal="fade-up">
+                    <div class="journal-card-media">
+                        <img src="assets/image(9).jpg" alt="Why the first message matters">
+                    </div>
+                    <div class="journal-card-body">
+                        <span class="journal-card-meta">Reservation / Editorial</span>
+                        <h3 class="journal-card-title">Why The First Reservation Message Shapes The Entire Stay</h3>
+                        <p class="journal-card-text">A clear reservation process does more than secure a room. It sets tone, trust, and expectation from the first exchange.</p>
+                        <a class="journal-card-link" href="blog-reservation-detail.html">Read article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="journal-card reveal delay-1" data-reveal="fade-up">
+                    <div class="journal-card-media">
+                        <img src="assets/image(12).jpg" alt="How to ask for the right room">
+                    </div>
+                    <div class="journal-card-body">
+                        <span class="journal-card-meta">Booking / Insight</span>
+                        <h3 class="journal-card-title">How To Ask For The Right Room Without Overcomplicating It</h3>
+                        <p class="journal-card-text">A practical note on communicating preferences clearly so the stay fits better from the start.</p>
+                        <a class="journal-card-link" href="blog-reservation-detail.html">Read article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="journal-card reveal delay-2" data-reveal="fade-up">
+                    <div class="journal-card-media">
+                        <img src="assets/image(5).jpg" alt="Arrival planning tips">
+                    </div>
+                    <div class="journal-card-body">
+                        <span class="journal-card-meta">Arrival / Note</span>
+                        <h3 class="journal-card-title">The Quiet Luxury Of A Well-Planned Arrival</h3>
+                        <p class="journal-card-text">Why timing, simple communication, and a few small notes can transform the first impression of a stay.</p>
+                        <a class="journal-card-link" href="blog-reservation-detail.html">Read article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-shell">
+                <div class="footer-brand">
+                    <h3 class="footer-title"><img src="assets/logo-white.png" alt="Ombara" class="preloader-logo"></h3>
+                    <p class="footer-text">Beachfront living with understated coastal luxury, crafted for slow mornings and elevated resort stays.</p>
+                </div>
+
+                <div class="footer-links-wrap">
+                    <div class="footer-links-group">
+                        <span class="footer-label">Explore</span>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer-link">Instagram</a>
+                        <a href="https://www.facebook.com/" target="_blank" class="footer-link">Facebook</a>
+                        <a href="https://www.waze.com/" target="_blank" class="footer-link">Waze</a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="footer-link">Linkedin</a>
+                    </div>
+
+                    <div class="footer-links-group">
+                        <span class="footer-label">Contact</span>
+                        <a href="tel:+60000000000" class="footer-link">+62 111 222 333</a>
+                        <a href="mailto:hello@oskombak.com" class="footer-link">hello@ombara.com</a>
+                        <span class="footer-meta">Bali, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-meta">Private coastal residences with a resort point of view.</span>
+                <span class="footer-meta">&copy; 2026 Ombara Bali. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="toTopBtn" type="button" aria-label="Back to top">
+        <span class="to-top-label" aria-hidden="true">
+            <i class="fa-solid fa-chevron-up"></i>
+        </span>
+        <span class="to-top-line">
+            <span class="to-top-line-progress" id="toTopProgress"></span>
+        </span>
+    </button>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared By NULLPHPSCRIPT.COM - Ombara - Luxury Hotel & Resort HTML Template</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/ico.png">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" >
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Dark Mode CSS -->
+    <link rel="stylesheet" href="css/dark.css">
+</head>
+<body class="is-loading always-show-header" data-bs-theme="dark">
+
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader-brand">
+            <img src="assets/logo-white.png" alt="Ombara" class="preloader-logo">
+            <div class="preloader-lines"></div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar (from index_1.html) -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg header-nav">
+            <div class="container-fluid header-shell">
+                <a class="navbar-brand header-logo" href="#home">
+                    <img src="assets/logo-black.png" alt="Hotel Logo" height="40" class="logo-dark">
+                    <img src="assets/logo-white.png" alt="Hotel Logo" height="40" class="logo-light">
+                </a>
+                <button class="navbar-toggler header-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse header-collapse" id="navbarNav">
+                    <ul class="navbar-nav header-menu">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link header-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Main Version</a></li>
+                                <li><a class="dropdown-item" href="index_1.html">Dark Version</a></li>
+                                <li><a class="dropdown-item" href="index_2.html">Classic Version</a></li>
+                                <li><a class="dropdown-item" href="index_3.html">Light Version</a></li>
+                                <li><a class="dropdown-item" href="index_4.html">Elrune Style</a></li>
+                                <li><a class="dropdown-item" href="index_5.html">Tulum Style</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="rooms.html">Rooms</a></li>
+                                <li><a class="dropdown-item" href="facilities.html">Facilities</a></li>
+                                <li><a class="dropdown-item" href="offer.html">Offer</a></li>
+                                <li><a class="dropdown-item" href="reservasi.html">Reservation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link header-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="#usps">Feature</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="#gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="#contact">Contact</a></li>
+                    </ul>
+                    <a class="header-register-btn" href="#contact">
+                        Book Now!
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Tulum Style Hero Section -->
+    <section id="home" class="position-relative vh-100 overflow-hidden d-flex align-items-end">
+        <!-- Background (Cross-fade setup) -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 z-0 bg-dark">
+            <img id="hero-main-bg-1" src="assets/version-2/image(13).jpg" alt="Luxury Interior" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover brightness-70 cross-fade-img opacity-100">
+            <img id="hero-main-bg-2" src="assets/version-2/image(13).jpg" alt="Luxury Interior" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover brightness-70 cross-fade-img opacity-0">
+            <!-- Gradient Overlay for better text readability (Elrune style darker at bottom) -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-elrune"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container-fluid position-relative z-1 px-4 px-md-5 pb-4 pb-md-5 w-100">
+            <div class="row align-items-end w-100 g-4">
+                <div class="col-lg-7 reveal" data-reveal="fade-up">
+                    <h1 class="display-3 font-heading fw-light text-white mb-1">Ombara Luxury Villa</h1>
+                    <div class="d-flex align-items-center flex-wrap gap-4 mb-1">
+                        <h2 class="display-5 text-white mb-0">$499 <span class="fs-4 text-white-50 fw-light">usd</span></h2>
+                        <a href="#contact" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-uppercase tracking-widest text-dark" style="font-size: 0.8rem;">Book Today!</a>
+                    </div>
+                    
+                    <p class="text-white-50 mb-5">Price per night for a double bed room</p>
+                    
+                    <!-- Feature Bar -->
+                    <div class="d-flex flex-wrap align-items-center mt-2">
+                        <div class="d-flex align-items-center me-4 pe-4 border-end border-white-25 mb-3 mb-md-0">
+                            <i class="fa-solid fa-umbrella-beach fs-3 text-white-50 me-3"></i>
+                            <div>
+                                <span class="d-block text-white fw-bold">Front Beach</span>
+                                <span class="d-block text-white-50 small">3 Bedrooms</span>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center me-4 pe-4 border-end border-white-25 mb-3 mb-md-0">
+                            <i class="fa-solid fa-hot-tub-person fs-3 text-white-50 me-3"></i>
+                            <div>
+                                <span class="d-block text-white fw-bold">Jacuzzi</span>
+                                <span class="d-block text-white-50 small">3 Bathrooms</span>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-3 mb-md-0">
+                            <i class="fa-solid fa-bell-concierge fs-3 text-white-50 me-3"></i>
+                            <div>
+                                <span class="d-block text-white fw-bold">Concierge</span>
+                                <span class="d-block text-white-50 small">24 hours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side -->
+                <div class="col-lg-5 d-flex flex-column align-items-lg-end justify-content-end reveal delay-2" data-reveal="fade-up">
+                    <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 text-white rounded-pill px-3 py-2 mb-4 backdrop-blur border border-white-25 align-self-lg-end me-lg-3">
+                        <span class="small fw-light">Over 50+ luxury villas available</span>
+                    </div>
+                    
+                    <div class="ticker-container w-100">
+                        <div class="ticker-track">
+                            <!-- Original Set -->
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4">
+                                <img src="assets/version-2/image(11).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 1">
+                            </div>
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4">
+                                <img src="assets/version-2/image(1).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 2">
+                            </div>
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4">
+                                <img src="assets/version-2/image(2).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 3">
+                            </div>
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4">
+                                <img src="assets/version-2/image(4).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 4">
+                            </div>
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4">
+                                <img src="assets/version-2/image(7).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 5">
+                            </div>
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4">
+                                <img src="assets/version-2/image(12).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 6">
+                            </div>
+
+                            <!-- Duplicated Set for Infinite Scroll -->
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4" aria-hidden="true">
+                                <img src="assets/version-2/image(11).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 1">
+                            </div>
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4" aria-hidden="true">
+                                <img src="assets/version-2/image(1).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 2">
+                            </div>
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4" aria-hidden="true">
+                                <img src="assets/version-2/image(2).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 3">
+                            </div>
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4" aria-hidden="true">
+                                <img src="assets/version-2/image(4).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 4">
+                            </div>
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4" aria-hidden="true">
+                                <img src="assets/version-2/image(7).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 5">
+                            </div>
+                            <div class="hero-mini-card hero-mini-card-size flex-shrink-0 overflow-hidden rounded-4" aria-hidden="true">
+                                <img src="assets/version-2/image(12).jpg" class="w-100 h-100 object-fit-cover hover-zoom" alt="Preview 6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (from index_1.html adapted to Dark Theme) -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="row mb-5 text-center reveal" data-reveal="fade-up">
+                <div class="col-12">
+                    <span class="accent-text text-gold">Discover</span>
+                    <h2 class="section-title text-white">A New Standard</h2>
+                    <p class="section-subtitle text-white-50">Where architectural brilliance harmonizes with nature</p>
+                </div>
+            </div>
+            <div class="about-grid">
+                <div class="about-item reveal" data-reveal="fade-up">
+                    <div class="about-img-wrapper overflow-hidden">
+                        <img src="assets/version-2/image(4).jpg" alt="Experience 1" class="img-fluid about-img" data-speed="1.1">
+                    </div>
+                    <div class="about-text">
+                        <h3 class="text-white">Harmony</h3>
+                        <p class="text-white-50">Discover profound tranquility within our meticulously crafted interiors.</p>
+                    </div>
+                </div>
+                <div class="about-item reveal delay-2" data-reveal="fade-up">
+                    <div class="about-img-wrapper overflow-hidden">
+                        <img src="assets/version-2/image(5).jpg" alt="Experience 2" class="img-fluid about-img" data-speed="1.1">
+                    </div>
+                    <div class="about-text">
+                        <h3 class="text-white">Vitality</h3>
+                        <p class="text-white-50">Restore your inner balance with our holistic spa and wellness offerings.</p>
+                    </div>
+                </div>
+                <div class="about-item reveal delay-4" data-reveal="fade-up">
+                    <div class="about-img-wrapper overflow-hidden">
+                        <img src="assets/version-2/image(6).jpg" alt="Experience 3" class="img-fluid about-img" data-speed="1.1">
+                    </div>
+                    <div class="about-text">
+                        <h3 class="text-white">Gastronomy</h3>
+                        <p class="text-white-50">Savor world-class gastronomy prepared by renowned culinary artisans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USPs Section (from index_1.html adapted to Dark Theme) -->
+    <section id="usps" class="usp-highlights section-padding">
+        <div class="container">
+            <div class="usp-highlights-head text-center reveal" data-reveal="fade-up">
+                <span class="accent-text text-gold">Exclusive Features</span>
+                <h2 class="section-title text-white">Redefining Coastal Excellence</h2>
+            </div>
+
+            <div class="usp-highlights-grid">
+                <div class="usp-highlights-item reveal" data-reveal="fade-up">
+                    <span class="usp-highlights-icon text-gold" aria-hidden="true"><i class="fa-solid fa-building"></i></span>
+                    <p class="text-white-50">Exclusive Freehold<br>Seafront Address</p>
+                </div>
+
+                <div class="usp-highlights-item reveal delay-06" data-reveal="fade-up">
+                    <span class="usp-highlights-icon text-gold" aria-hidden="true"><i class="fa-solid fa-umbrella-beach"></i></span>
+                    <p class="text-white-50">Private Access to<br>Pristine Beachfront</p>
+                </div>
+
+                <div class="usp-highlights-item reveal delay-12" data-reveal="fade-up">
+                    <span class="usp-highlights-icon text-gold" aria-hidden="true"><i class="fa-solid fa-water"></i></span>
+                    <p class="text-white-50">Panoramic Ocean<br>View Experience</p>
+                </div>
+
+                <div class="usp-highlights-item reveal delay-18" data-reveal="fade-up">
+                    <span class="usp-highlights-icon text-gold" aria-hidden="true"><i class="fa-solid fa-spa"></i></span>
+                    <p class="text-white-50">Resort-Style Wellness<br>& Leisure Facilities</p>
+                </div>
+
+                <div class="usp-highlights-item reveal delay-24" data-reveal="fade-up">
+                    <span class="usp-highlights-icon text-gold" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
+                    <p class="text-white-50">Thoughtfully Designed<br>Flexible Layouts</p>
+                </div>
+
+                <div class="usp-highlights-item reveal delay-3" data-reveal="fade-up">
+                    <span class="usp-highlights-icon text-gold" aria-hidden="true"><i class="fa-solid fa-store"></i></span>
+                    <p class="text-white-50">Retail Conveniences<br>Within Reach</p>
+                </div>
+
+                <div class="usp-highlights-item reveal delay-36" data-reveal="fade-up">
+                    <span class="usp-highlights-icon text-gold" aria-hidden="true"><i class="fa-solid fa-couch"></i></span>
+                    <p class="text-white-50">Move-In Ready<br>Fully Furnished Homes</p>
+                </div>
+
+                <div class="usp-highlights-item reveal delay-42" data-reveal="fade-up">
+                    <span class="usp-highlights-icon text-gold" aria-hidden="true"><i class="fa-solid fa-key"></i></span>
+                    <p class="text-white-50">Smart Dual-Key<br>Investment Concept</p>
+                </div>
+
+                <div class="usp-highlights-item reveal delay-48" data-reveal="fade-up">
+                    <span class="usp-highlights-icon text-gold" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+                    <p class="text-white-50">Sustainable Living with<br>GreenRE Certification</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section (from index_1.html adapted to Dark Theme) -->
+    <section id="facilities" class="facilities">
+        <div class="facilities-split">
+            <!-- Left Side: Image -->
+            <div class="facilities-image-pane reveal reveal-media" data-reveal="fade-right">
+                <img src="assets/version-2/image(7).jpg" alt="Facilities" class="facilities-img" data-speed="1.05">
+            </div>
+            
+            <!-- Right Side: Content with Tabs -->
+            <div class="facilities-content-pane">
+                <div class="facilities-inner reveal" data-reveal="fade-up">
+                    <span class="accent-text text-start text-gold">Immerse</span>
+                    <h2 class="section-title text-start mb-4 text-white">World-Class Amenities</h2>
+                    
+                    <!-- jQuery Tabs Container -->
+                    <div class="fac-tabs">
+                        <ul class="fac-tabs-nav border-bottom border-white-25">
+                            <li class="fac-tabs-item active text-white" data-target="#tab-pool">Infinity Pool</li>
+                            <li class="fac-tabs-item text-white-50" data-target="#tab-spa">Spa & Wellness</li>
+                            <li class="fac-tabs-item text-white-50" data-target="#tab-gym">Fitness Center</li>
+                        </ul>
+                        
+                        <div class="fac-tabs-content text-white-50">
+                            <div id="tab-pool" class="fac-tab-pane active">
+                                <h3 class="text-white">Infinity Pool</h3>
+                                <p>Dive into our stunning infinity pool overlooking the ocean. The perfect spot to watch the sunset with a cocktail in hand.</p>
+                                <img src="assets/version-2/image(8).jpg" alt="Pool" class="img-fluid mt-3 rounded">
+                            </div>
+                            <div id="tab-spa" class="fac-tab-pane">
+                                <h3 class="text-white">Spa & Wellness</h3>
+                                <p>Relax and unwind with our signature massage treatments using organic local ingredients.</p>
+                                <img src="assets/version-2/image(9).jpg" alt="Spa" class="img-fluid mt-3 rounded">
+                            </div>
+                            <div id="tab-gym" class="fac-tab-pane">
+                                <h3 class="text-white">Fitness Center</h3>
+                                <p>Stay active during your vacation in our state-of-the-art gym equipped with the latest machines.</p>
+                                <img src="assets/version-2/image(10).jpg" alt="Gym" class="img-fluid mt-3 rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Preview Section (from index_1.html adapted to Dark Theme) -->
+    <section id="rooms" class="rooms section-padding">
+        <div class="container">
+            <div class="row mb-5 text-center reveal" data-reveal="fade-up">
+                <div class="col-12">
+                    <span class="accent-text text-gold">Sanctuaries</span>
+                    <h2 class="section-title text-white">Exquisite Accommodations</h2>
+                    <p class="section-subtitle text-white-50">Designed for your utmost comfort</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 reveal" data-reveal="fade-up">
+                    <div class="room-card overflow-hidden">
+                        <img src="assets/version-2/image(11).jpg" alt="Ocean Suite" class="img-fluid room-img" data-speed="1.05">
+                        <div class="room-info">
+                            <h3 class="text-white">Ocean View Suite</h3>
+                            <p class="text-white-50">Spacious suite with a panoramic view of the sea.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 reveal delay-2" data-reveal="fade-up">
+                    <div class="room-card overflow-hidden">
+                        <img src="assets/version-2/image(12).jpg" alt="Garden Villa" class="img-fluid room-img" data-speed="1.05">
+                        <div class="room-info">
+                            <h3 class="text-white">Private Garden Villa</h3>
+                            <p class="text-white-50">Exclusive villa surrounded by lush tropical gardens.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Scroll Section (from index_1.html adapted to Dark Theme) -->
+    <section id="gallery" class="gallery-scroll section-padding">
+        <div class="container">
+            <div class="gallery-scroll-shell">
+                <div class="gallery-scroll-intro reveal" data-reveal="fade-right">
+                    <span class="accent-text text-start text-gold">Gallery</span>
+                    <h2 class="section-title text-start text-white">A Glimpse into Ombara</h2>
+                    <p class="section-subtitle text-start text-white-50">
+                       A seamless journey through refined spaces, coastal architecture, and thoughtfully crafted details.
+                    </p>
+                    <div class="gallery-scroll-copy text-white-50">
+                        <p>
+                            Each scene reveals another layer of the destination, capturing the balance between natural beauty and contemporary luxury.
+                        </p>
+                        <p>
+                           Designed to immerse visitors in the atmosphere of Ombara before they even arrive.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gallery-scroll-track">
+                    <div class="gallery-scroll-card reveal" data-reveal="fade-up">
+                        <div class="gallery-scroll-media">
+                            <img src="assets/version-2/image(13).jpg" alt="Gallery oceanfront pool view" class="gallery-scroll-image" data-speed="1.04">
+                        </div>
+                        <div class="gallery-scroll-content">
+                            <span class="gallery-scroll-kicker text-gold">01 / Arrival</span>
+                            <h3 class="gallery-scroll-title text-white">Coastal Horizon</h3>
+                            <p class="gallery-scroll-text text-white-50">A first impression shaped by open skies, quiet water, and soft architectural lines.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-scroll-card reveal delay-08" data-reveal="fade-up">
+                        <div class="gallery-scroll-media">
+                            <img src="assets/version-2/image(14).jpg" alt="Gallery infinity pool scene" class="gallery-scroll-image" data-speed="1.06">
+                        </div>
+                        <div class="gallery-scroll-content">
+                            <span class="gallery-scroll-kicker text-gold">02 / Leisure</span>
+                            <h3 class="gallery-scroll-title text-white">Resort Light</h3>
+                            <p class="gallery-scroll-text text-white-50">Sun-washed amenities and framed ocean views create an effortless rhythm throughout the day.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-scroll-card reveal delay-16" data-reveal="fade-up">
+                        <div class="gallery-scroll-media">
+                            <img src="assets/version-2/image(15).jpg" alt="Gallery suite interior" class="gallery-scroll-image" data-speed="1.05">
+                        </div>
+                        <div class="gallery-scroll-content">
+                            <span class="gallery-scroll-kicker text-gold">03 / Stay</span>
+                            <h3 class="gallery-scroll-title text-white">Private Calm</h3>
+                            <p class="gallery-scroll-text text-white-50">Refined materials, warm textures, and generous space bring a more intimate residential feel.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-scroll-card reveal delay-24" data-reveal="fade-up">
+                        <div class="gallery-scroll-media">
+                            <img src="assets/version-2/image(16).jpg" alt="Gallery wellness atmosphere" class="gallery-scroll-image" data-speed="1.07">
+                        </div>
+                        <div class="gallery-scroll-content">
+                            <span class="gallery-scroll-kicker text-gold">04 / Restore</span>
+                            <h3 class="gallery-scroll-title text-white">Wellness Mood</h3>
+                            <p class="gallery-scroll-text text-white-50">The journey closes with spaces that feel slow, grounded, and deeply restorative.</p>
+                        </div>
+                    </div>
+                </div>`
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Gallery Section (from index_1.html) -->
+    <section class="feature-gallery-section" data-feature-gallery-scroll>
+        <div class="feature-gallery-scroll__sticky">
+            <div class="feature-gallery-scroll__slides">
+                <figure class="feature-gallery-scroll__slide is-active" data-feature-gallery-slide>
+                    <img src="assets/version-2/image(7).jpg" alt="Pool view at Ombara" class="brightness-70">
+                </figure>
+                <figure class="feature-gallery-scroll__slide" data-feature-gallery-slide>
+                    <img src="assets/version-2/image(8).jpg" alt="Aegean Falls Cascading Pool at Ground Floor" class="brightness-70">
+                </figure>
+                <figure class="feature-gallery-scroll__slide" data-feature-gallery-slide>
+                    <img src="assets/version-2/image(1).jpg" alt="The Arrival at Ground Floor" class="brightness-70">
+                </figure>
+                <figure class="feature-gallery-scroll__slide" data-feature-gallery-slide>
+                    <img src="assets/version-2/image(11).jpg" alt="Lobby Reception at Ground Floor" class="brightness-70">
+                </figure>
+                <figure class="feature-gallery-scroll__slide" data-feature-gallery-slide>
+                    <img src="assets/version-2/image(15).jpg" alt="The Play Garden at Level 8" class="brightness-70">
+                </figure>
+                <figure class="feature-gallery-scroll__slide" data-feature-gallery-slide>
+                    <img src="assets/version-2/image(16).jpg" alt="Terrace by the Sea BBQ Pit and Lounge at Level 8" class="brightness-70">
+                </figure>
+            </div>
+
+            <div class="feature-gallery-scroll__overlay">
+                <div class="feature-gallery-scroll__meta">
+                    <p class="feature-gallery-scroll__count text-white">
+                        <span id="featureGalleryCurrentIndex">01</span>
+                        <span aria-hidden="true" class="text-white-50">—</span>
+                        <span id="featureGalleryTotalCount" class="text-white-50">06</span>
+                    </p>
+                </div>
+
+                <div class="feature-gallery-scroll__card reveal" data-reveal="fade-up">
+                    <span class="feature-gallery-scroll__card-kicker text-gold" id="featureGalleryCardEyebrow">Gallery</span>
+                    <h2 class="feature-gallery-scroll__title text-white" id="featureGalleryCardTitle">Pool</h2>
+                    <div class="feature-gallery-scroll__card-media">
+                        <img id="featureGalleryCardImage" src="assets/version-2/image(7).jpg" alt="Pool view at Ombara">
+                    </div>
+                    <p class="feature-gallery-scroll__card-text text-white-50" id="featureGalleryCardText">
+                        Pool
+                    </p>
+                </div>
+
+                <div class="feature-gallery-scroll__meta">
+                    <button class="feature-gallery-scroll__skip text-white-50 text-white-hover" id="featureGallerySkipBtn" type="button" aria-label="Skip feature gallery">
+                        Skip
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="feature-gallery-scroll__progress" aria-hidden="false">
+                <button class="feature-gallery-scroll__nav-button text-white-50" id="featureGalleryPrevBtn" type="button" aria-label="Previous feature gallery slide">Prev</button>
+                <div class="feature-gallery-scroll__progress-track bg-dark border border-white-25" aria-hidden="true">
+                    <span class="feature-gallery-scroll__progress-line bg-white-25"></span>
+                    <span class="feature-gallery-scroll__progress-fill bg-gold" id="featureGalleryProgressFill"></span>
+                </div>
+                <button class="feature-gallery-scroll__nav-button text-white" id="featureGalleryNextBtn" type="button" aria-label="Next feature gallery slide">Next</button>
+            </div>
+
+            <div class="feature-gallery-scroll__data" hidden>
+                <div data-feature-gallery-info data-eyebrow="Gallery" data-title="Pool" data-text="Pool"></div>
+                <div data-feature-gallery-info data-eyebrow="Ground Floor" data-title="Aegean Falls Cascading Pool" data-text="Aegean Falls Cascading Pool @ Ground Floor"></div>
+                <div data-feature-gallery-info data-eyebrow="Ground Floor" data-title="The Arrival" data-text="The Arrival @ Ground Floor"></div>
+                <div data-feature-gallery-info data-eyebrow="Ground Floor" data-title="Lobby Reception" data-text="Lobby Reception @ Ground Floor"></div>
+                <div data-feature-gallery-info data-eyebrow="Level 8" data-title="The Play Garden" data-text="The Play Garden @ Level 8"></div>
+                <div data-feature-gallery-info data-eyebrow="Level 8" data-title="Terrace by the Sea BBQ Pit &amp; Lounge" data-text="Terrace by the Sea BBQ Pit &amp; Lounge @ Level 8"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Showcase Section (from index_1.html adapted to Dark Theme) -->
+    <section class="room-showcase-section section-padding pb-1">
+        <div class="container">
+            <div class="row">
+                <div class="room-showcase-wrap">
+                    <div class="room-showcase">
+                        <div class="room-showcase-media reveal delay-12" data-reveal="fade-left">
+                            <button
+                                class="room-showcase-trigger border border-white-25"
+                                type="button"
+                                data-iframe-src="https://www.youtube.com/embed/cdKx1Zv3YKs?si=Qt_JJys6fB6kgCAb"
+                                aria-label="Load immersive suite preview">
+                                <img src="assets/version-2/image(15).jpg" alt="Deluxe King room preview" class="room-showcase-image" data-speed="1.03">
+                                <span class="room-showcase-play" aria-hidden="true"></span>
+                            </button>
+
+                            <iframe
+                                class="room-showcase-frame"
+                                title="External suite iframe preview"
+                                loading="lazy"
+                                allow="autoplay; encrypted-media"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <div class="room-showcase-panel reveal" data-reveal="fade-right">
+                            <span class="room-showcase-kicker text-gold">Your Sanctuary</span>
+                            <h2 class="room-showcase-title h3 text-white">Deluxe King</h2>
+                            <p class="room-showcase-text text-white-50">
+                                Unwind in the spacious Deluxe King room with warm wood tones, soft lighting,
+                                and a calm residential atmosphere for a more intimate stay experience.
+                            </p>
+                            <div class="room-showcase-specs border-top border-white-25 pt-3 mt-3">
+                                <span class="room-showcase-spec text-white-50"><i class="fa-solid fa-bed me-2 text-gold"></i>1 King Bed</span>
+                                <span class="room-showcase-spec text-white-50"><i class="fa-solid fa-user-group me-2 text-gold"></i>2 Guests</span>
+                            </div>
+                            <button class="room-showcase-link" type="button" data-load-room-preview>Show More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration / Contact Section (From index_2.html but adapted for Dark theme) -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0 reveal" data-reveal="fade-right">
+                    <span class="accent-text text-start text-gold">The Next Chapter</span>
+                    <h2 class="display-6 mb-2 font-playfair text-white">Join the Inner Circle</h2>
+                    <p class="text-white-50 text-sm">
+                        Register your interest to receive exclusive updates, priority access to floor plans, and invitations to private viewings before the public launch.
+                    </p>
+                    
+                    <div class="mt-5 d-none d-lg-block">
+                        <p class="text-white-50 mb-2 text-uppercase tracking-widest">Direct Inquiries</p>
+                        <h3 class="h4 font-playfair text-white">+60 3 2711 8888</h3>
+                        <p class="text-white-50">enquiries@ombara.com</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 offset-lg-1 reveal delay-2" data-reveal="fade-left">
+                        <form class="register-form" action="contact-submit.php" method="POST" data-form-label="Tulum Style Register">
+                            <div class="mb-4">
+                                <label class="form-label text-white-50 text-uppercase tracking-widest">Full Name</label>
+                                <input type="text" name="name" class="form-control border-0 border-bottom border-white-25 rounded-0 bg-transparent px-0 text-white shadow-none" placeholder="Your name" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="form-label text-white-50 text-uppercase tracking-widest">Email Address</label>
+                                <input type="email" name="email" class="form-control border-0 border-bottom border-white-25 rounded-0 bg-transparent px-0 text-white shadow-none" placeholder="your@email.com" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="form-label text-white-50 text-uppercase tracking-widest">Phone Number</label>
+                                <div class="phone-input-wrap">
+                                    <select id="reg-country-code" name="country_code" aria-label="Country Code">
+                                        <option value="+1">+1</option>
+                                        <option value="+60" selected>+60</option>
+                                        <option value="+62">+62</option>
+                                    </select>
+                                    <input type="tel" id="reg-phone" name="phone" placeholder="Enter your phone number" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" name="terms" class="form-check-input border-white-25 rounded-0 bg-dark" id="termsCheckTulum" required>
+                                <label class="form-check-label text-white-50 text-xs" for="termsCheckTulum">
+                                    I consent to the collection and processing of my personal data for marketing purposes in accordance with the PDPA.
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="register-submit-btn">Register Interest</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-shell">
+                <div class="footer-brand">
+                    <h3 class="footer-title"><img src="assets/logo-white.png" alt="Ombara" class="preloader-logo"></h3>
+                    <p class="footer-text">Beachfront living with understated coastal luxury, crafted for slow mornings and elevated resort stays.</p>
+                </div>
+
+                <div class="footer-links-wrap">
+                    <div class="footer-links-group">
+                        <span class="footer-label">Explore</span>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer-link">Instagram</a>
+                        <a href="https://www.facebook.com/" target="_blank" class="footer-link">Facebook</a>
+                        <a href="https://www.waze.com/" target="_blank" class="footer-link">Waze</a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="footer-link">Linkedin</a>
+                    </div>
+
+                    <div class="footer-links-group">
+                        <span class="footer-label">Contact</span>
+                        <a href="tel:+60000000000" class="footer-link">+62 111 222 333</a>
+                        <a href="mailto:hello@oskombak.com" class="footer-link">hello@ombara.com</a>
+                        <span class="footer-meta">Bali, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-meta">Private coastal residences with a resort point of view.</span>
+                <span class="footer-meta">&copy; 2026 Ombara Bali. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <button class="to-top" id="toTopBtn" type="button" aria-label="Back to top">
+        <span class="to-top-label" aria-hidden="true">
+            <i class="fa-solid fa-chevron-up"></i>
+        </span>
+        <span class="to-top-line">
+            <span class="to-top-line-progress" id="toTopProgress"></span>
+        </span>
+    </button>
+
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Lenis Smooth Scroll API -->
+    <script src="js/lenis.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/slider-custom.js"></script>
+</body>
+</html>
