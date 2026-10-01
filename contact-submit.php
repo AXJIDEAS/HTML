@@ -9,6 +9,7 @@ declare(strict_types=1);
  */
 
 header('Content-Type: application/json; charset=utf-8');
+ini_set('display_errors', '0');
 
 require_once __DIR__ . '/db-config.php';
 
@@ -90,7 +91,7 @@ try {
         ':country'     => $country !== '' ? $country : 'Not Specified',
         ':source_page' => $pageName,
     ]);
-} catch (PDOException $e) {
+} catch (Throwable $e) {
     // Si la BD falla, registramos el error y avisamos
     respond(500, [
         'success' => false,

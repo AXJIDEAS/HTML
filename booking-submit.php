@@ -10,6 +10,7 @@ declare(strict_types=1);
  */
 
 header('Content-Type: application/json; charset=utf-8');
+ini_set('display_errors', '0');
 
 require_once __DIR__ . '/db-config.php';
 
@@ -216,11 +217,11 @@ try {
         ],
     ]);
 
-} catch (PDOException $e) {
-    // Si hay un error de conexión con MySQL, informarlo claramente
+} catch (Throwable $e) {
+    // Si hay un error de conexión con MySQL o del sistema, informarlo en JSON válido
     respond(500, [
         'success' => false,
-        'message' => 'Error al conectar con la base de datos MySQL. Verifica las credenciales en db-config.php.',
+        'message' => 'Error al procesar la reserva. Por favor verifica la conexión con la base de datos.',
         'error_detail' => $e->getMessage(),
     ]);
 }

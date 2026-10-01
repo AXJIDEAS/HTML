@@ -18,6 +18,9 @@ define('DB_USER', getenv('DB_USER') ?: 'root');
 define('DB_PASS', getenv('DB_PASS') !== false ? getenv('DB_PASS') : 'root');
 define('DB_CHARSET', 'utf8mb4');
 
+// Silenciar advertencias de obsolescencia para evitar corromper respuestas JSON en PHP 8.5+
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+
 /**
  * Obtiene la conexión PDO a MySQL.
  * Compatible automáticamente con FlyEnv (Arch Linux) y XAMPP clásico.
@@ -37,7 +40,6 @@ function getDbConnection(): PDO
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::ATTR_EMULATE_PREPARES   => false,
-        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES " . DB_CHARSET . " COLLATE utf8mb4_unicode_ci",
     ];
 
     // Lista de contraseñas a probar automáticamente (FlyEnv usa 'root', XAMPP usa '')

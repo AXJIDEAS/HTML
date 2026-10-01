@@ -665,6 +665,14 @@ $(document).ready(function () {
 
             if (xhr.responseJSON && xhr.responseJSON.message) {
                 message = xhr.responseJSON.message;
+            } else if (xhr.responseText) {
+                try {
+                    const jsonMatch = xhr.responseText.match(/\{[\s\S]*\}/);
+                    if (jsonMatch) {
+                        const parsed = JSON.parse(jsonMatch[0]);
+                        if (parsed.message) message = parsed.message;
+                    }
+                } catch (e) {}
             }
 
             $status
@@ -685,14 +693,19 @@ $(document).ready(function () {
         const $roomType = $('#res-room-type');
         if (!$checkIn.length || !$checkOut.length || !$roomType.length) return;
 
-        // 1. Configurar fechas mínimas y por defecto
+        // 1. Configurar fechas mínimas y por defecto (inmune a desfase UTC)
         const now = new Date();
         const tomorrow = new Date(now);
         tomorrow.setDate(tomorrow.getDate() + 1);
         const threeDaysLater = new Date(now);
         threeDaysLater.setDate(threeDaysLater.getDate() + 4);
 
-        const formatDate = (d) => d.toISOString().split('T')[0];
+        const formatDate = (d) => {
+            const year = d.getFullYear();
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        };
 
         $checkIn.attr('min', formatDate(now));
         if (!$checkIn.val()) {
