@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS `reservations` (
     `guest_phone` VARCHAR(50) NOT NULL,
     `country` VARCHAR(100) DEFAULT 'Not Specified',
     `room_type` VARCHAR(100) NOT NULL COMMENT 'Tipo de habitación seleccionada',
+    `room_id` INT NULL COMMENT 'Habitación física asignada automáticamente',
     `room_rate` DECIMAL(10, 2) NOT NULL DEFAULT 0.00 COMMENT 'Precio por noche en USD',
     `check_in` DATE NOT NULL,
     `check_out` DATE NOT NULL,
@@ -27,12 +28,26 @@ CREATE TABLE IF NOT EXISTS `reservations` (
     `children` INT NOT NULL DEFAULT 0,
     `total_nights` INT NOT NULL DEFAULT 1,
     `total_price` DECIMAL(10, 2) NOT NULL DEFAULT 0.00,
+    `payment_method` ENUM('cash', 'debit_card', 'credit_card', 'bank_transfer', 'online') DEFAULT NULL,
+    `payment_status` ENUM('pending', 'paid') NOT NULL DEFAULT 'pending',
     `special_requests` TEXT NULL,
     `status` ENUM('confirmed', 'pending', 'cancelled') NOT NULL DEFAULT 'confirmed',
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     INDEX `idx_booking_code` (`booking_code`),
     INDEX `idx_dates` (`check_in`, `check_out`),
+    INDEX `idx_reservation_room_dates` (`room_id`, `check_in`, `check_out`),
     INDEX `idx_email` (`guest_email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+-- Inventario operativo de habitaciones
+-- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `rooms` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `room_number` VARCHAR(20) NOT NULL UNIQUE,
+    `room_type` VARCHAR(100) NOT NULL,
+    `status` ENUM('available', 'occupied', 'maintenance', 'cleaning') NOT NULL DEFAULT 'available',
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -49,6 +64,33 @@ CREATE TABLE IF NOT EXISTS `memberships` (
     `status` ENUM('active', 'pending') NOT NULL DEFAULT 'active',
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     INDEX `idx_member_email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+-- Cuentas de administración y recepción
+-- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `users` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(150) NOT NULL,
+    `email` VARCHAR(190) NOT NULL UNIQUE,
+    `phone` VARCHAR(50) DEFAULT NULL,
+    `whatsapp_number` VARCHAR(30) DEFAULT NULL,
+    `role` ENUM('admin', 'receptionist') NOT NULL DEFAULT 'receptionist',
+    `password_hash` VARCHAR(255) NOT NULL,
+    `is_active` TINYINT(1) NOT NULL DEFAULT 1,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    INDEX `idx_users_role_active` (`role`, `is_active`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `notification_logs` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `reservation_id` INT NOT NULL,
+    `channel` ENUM('email', 'whatsapp') NOT NULL,
+    `recipient` VARCHAR(190) NOT NULL,
+    `delivery_status` ENUM('sent', 'failed', 'skipped') NOT NULL,
+    `error_code` VARCHAR(80) DEFAULT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    INDEX `idx_notification_reservation` (`reservation_id`, `channel`, `delivery_status`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------

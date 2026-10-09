@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shared By NULLPHPSCRIPT.COM - Ombara - Luxury Hotel & Resort HTML Template</title>
+    <title>Ombara | Hotel &amp; Resort de Lujo en Bali</title>
+    <meta name="description" content="Ombara Hotel &amp; Resort en Bali. Descubra el lujo costero contemporáneo, suites exclusivas frente al mar, bienestar holístico y gastronomía de autor.">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/ico.png">
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" >
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Dark Mode CSS -->
+    <link rel="stylesheet" href="css/dark.css">
 </head>
-<body class="is-loading">
+<body class="is-loading always-show-header" data-bs-theme="dark">
 
     <div class="preloader" id="preloader" aria-hidden="true">
         <div class="preloader-brand">
@@ -24,270 +27,290 @@
         </div>
     </div>
 
-    <!-- Header / Navbar -->
+    <!-- Header / Navbar Simplificada y Elegante -->
     <header class="header">
         <nav class="navbar navbar-expand-lg header-nav">
             <div class="container-fluid header-shell">
                 <a class="navbar-brand header-logo" href="#home">
-                    <img src="assets/logo-black.png" alt="Hotel Logo" height="40" class="logo-dark">
-                    <img src="assets/logo-white.png" alt="Hotel Logo" height="40" class="logo-light">
+                    <img src="assets/logo-black.png" alt="Ombara Hotel" height="40" class="logo-dark">
+                    <img src="assets/logo-white.png" alt="Ombara Hotel" height="40" class="logo-light">
                 </a>
-                <button class="navbar-toggler header-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler header-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse header-collapse" id="navbarNav">
                     <ul class="navbar-nav header-menu">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link header-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Pages
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="index.html">Main Version</a></li>
-                                <li><a class="dropdown-item" href="index_1.html">Dark Version</a></li>
-                                <li><a class="dropdown-item" href="index_2.html">Classic Version</a></li>
-                                <li><a class="dropdown-item" href="index_3.html">Light Version</a></li>
-                                <li><a class="dropdown-item" href="index_4.html">Elrune Style</a></li>
-                                <li><a class="dropdown-item" href="index_5.html">Tulum Style</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="rooms.html">Rooms</a></li>
-                                <li><a class="dropdown-item" href="facilities.html">Facilities</a></li>
-                                <li><a class="dropdown-item" href="offer.html">Offer</a></li>
-                                <li><a class="dropdown-item" href="reservasi.html">Reservation</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link header-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link header-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link header-link" href="#usps">USPs</a></li>
-                        <li class="nav-item"><a class="nav-link header-link" href="#facilities">Facilities</a></li>
-                        <li class="nav-item"><a class="nav-link header-link" href="#rooms">Rooms</a></li>
-                        <li class="nav-item"><a class="nav-link header-link" href="#gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="#home">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="#about">Experiencia</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="#facilities">Amenidades</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="#rooms">Habitaciones</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="#gallery">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link header-link" href="#register">Contacto</a></li>
                     </ul>
-                    <a class="header-register-btn" href="#register">
-                        Register
+                    <a class="header-register-btn" href="#heroBookingBar" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                        <i class="fa-solid fa-calendar-check me-1"></i> Reservar Ahora
+                    </a>
+                    <a class="header-team-btn" href="backend/admin/access.html">
+                        <i class="fa-solid fa-user-group" aria-hidden="true"></i> Soy parte del equipo
                     </a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section with Image Slider -->
+    <!-- Hero Section con Slider y Barra de Reserva -->
     <div class="hero-wrapper">
         <section id="home" class="hero">
             <div class="hero-mask">
-                <div class="hero-topbar">
-                    <nav class="hero-menu" aria-label="Hero navigation">
-                        <a class="hero-menu-link" href="#usps">USPs</a>
-                        <span class="hero-menu-divider"></span>
-                        <a class="hero-menu-link" href="#facilities">Facilities</a>
-                        <span class="hero-menu-divider"></span>
-                        <a class="hero-menu-link" href="#gallery">Gallery</a>
-                    </nav>
-                    <div class="hero-menu-actions">
-                        <a class="hero-action hero-action-icon" href="https://web.whatsapp.com/" target="_blank" aria-label="WhatsApp">
-                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                        </a>
-                        <a class="hero-action hero-action-icon" href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a class="hero-action hero-action-icon" href="https://www.waze.com/" target="_blank" aria-label="Waze">
-                            <i class="fa-brands fa-waze" aria-hidden="true"></i>
-                        </a>
-                        <span class="hero-menu-divider"></span>
-                        <a class="hero-action hero-action-pill" href="#register">Register</a>
-                    </div>
-                </div>
                 <!-- Swiper Container -->
                 <div class="swiper hero-swiper hero-media-wrapper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <img src="assets/image(1).jpg" alt="The Arrival" class="hero-img">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="assets/version-2/image(1).jpg" alt="La Llegada a Ombara" class="hero-img">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <img src="assets/version-2/image(2).jpg" alt="Vida Costera en Ombara" class="hero-img">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <img src="assets/version-2/image(3).jpg" alt="Vista al Mar en Ombara" class="hero-img">
+                        </div>
                     </div>
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <img src="assets/image(9).jpg" alt="NULLPHPSCRIPT.COM" class="hero-img">
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <img src="assets/image(6).jpg" alt="Ocean View" class="hero-img">
-                    </div>
+                    <div class="hero-overlay"></div>
                 </div>
-                <div class="hero-overlay"></div>
-            </div>
 
-            <!-- Central Content -->
-            <div class="hero-center-content">
-                <div class="hero-logo-wrapper reveal" data-reveal="fade-up">
-                    <h1 class="visually-hidden">Ombara</h1>
-                    <img src="assets/logo-white.png" alt="Ombara Logo" class="hero-main-logo">
-                </div>
-                <p class="hero-main-subtitle reveal delay-1" data-reveal="fade-up">
-                    Experience elevated living with thoughtfully designed residences, <br>refined comfort, and exclusive resort-style amenities.
-                </p>
-                <div class="hero-badge reveal delay-2" data-reveal="fade-up">
-                    <span class="hero-badge-item">Curated Stays</span>
-                    <span class="hero-badge-item">Tropical Escape</span>
-                    <span class="hero-badge-item">Private Comfort</span>
-                </div>
-            </div>
-
-            <!-- Bottom Controls -->
-            <div class="hero-bottom-controls">
-                <div class="hero-slider-nav">
-                    <div class="hero-slide-title" id="hero-slide-title">
-                        <span class="hero-slide-title-text">The Arrival</span>
+                <!-- Central Content -->
+                <div class="hero-center-content">
+                    <div class="hero-logo-wrapper reveal" data-reveal="fade-up">
+                        <h1 class="visually-hidden">Ombara Luxury Hotel &amp; Resort</h1>
+                        <img src="assets/logo-white.png" alt="Ombara Logo" class="hero-main-logo">
                     </div>
-                    <div class="hero-nav-controls">
-                        <div class="hero-nav-btn swiper-prev">PREV</div>
-                        <div class="hero-nav-indicator">
-                            <span class="current">01</span> / <span class="total">03</span>
-                            <div class="hero-nav-line">
-                                <div class="hero-nav-progress"></div>
+                    <p class="hero-main-subtitle reveal delay-1" data-reveal="fade-up">
+                        Sumérjase en un lujo costero incomparable.<br>Un santuario donde la elegancia moderna abraza la serenidad del mar.
+                    </p>
+
+                    <!-- Hero Luxury Booking Bar: Motor de Reserva Rápido -->
+                    <div class="hero-booking-bar-wrapper reveal delay-2" data-reveal="fade-up" id="heroBookingBar">
+                        <div class="hero-booking-bar">
+                            <div class="hero-booking-field">
+                                <label class="hero-booking-label" for="heroCheckIn">
+                                    <i class="fa-regular fa-calendar-check"></i> Llegada
+                                </label>
+                                <input type="date" id="heroCheckIn" class="hero-booking-input" required>
+                            </div>
+
+                            <div class="hero-booking-field">
+                                <label class="hero-booking-label" for="heroCheckOut">
+                                    <i class="fa-regular fa-calendar-xmark"></i> Salida
+                                </label>
+                                <input type="date" id="heroCheckOut" class="hero-booking-input" required>
+                            </div>
+
+                            <div class="hero-booking-field">
+                                <label class="hero-booking-label" for="heroRoomType">
+                                    <i class="fa-solid fa-bed"></i> Habitación
+                                </label>
+                                <select id="heroRoomType" class="hero-booking-input">
+                                    <option value="Ocean View Suite" data-rate="220" selected>Suite Vista al Océano — $220/nt</option>
+                                    <option value="Garden Villa" data-rate="180">Villa Privada Jardín — $180/nt</option>
+                                    <option value="Deluxe King Residence" data-rate="260">Residencia Deluxe King — $260/nt</option>
+                                    <option value="Family Residence" data-rate="310">Residencia Familiar — $310/nt</option>
+                                </select>
+                            </div>
+
+                            <div class="hero-booking-field hero-booking-field-sm">
+                                <label class="hero-booking-label" for="heroGuests">
+                                    <i class="fa-solid fa-user-group"></i> Huéspedes
+                                </label>
+                                <select id="heroGuests" class="hero-booking-input">
+                                    <option value="1">1 Huésped</option>
+                                    <option value="2" selected>2 Huéspedes</option>
+                                    <option value="3">3 Huéspedes</option>
+                                    <option value="4">4 Huéspedes</option>
+                                    <option value="5+">5+ Huéspedes</option>
+                                </select>
+                            </div>
+
+                            <div class="hero-booking-action">
+                                <button type="button" class="hero-booking-btn" id="heroSubmitBtn" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                    <i class="fa-solid fa-calendar-check"></i> Reservar Ahora
+                                </button>
                             </div>
                         </div>
-                        <div class="hero-nav-btn swiper-next">NEXT</div>
+
+                        <div class="hero-booking-meta">
+                            <span><i class="fa-solid fa-shield-halved text-warning me-1"></i> Garantía de Mejor Tarifa &bull; Confirmación Inmediata</span>
+                            <span class="hero-booking-meta-rate"><i class="fa-solid fa-tag me-1"></i> Tarifas desde $180 USD / noche</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-badge reveal delay-3" data-reveal="fade-up">
+                        <span class="hero-badge-item">Lujo a Medida</span>
+                        <span class="hero-badge-item">Frente al Océano</span>
+                        <span class="hero-badge-item">Retiro de Serenidad</span>
                     </div>
                 </div>
-            </div>
+
+                <!-- Bottom Controls -->
+                <div class="hero-bottom-controls">
+                    <div class="hero-slider-nav">
+                        <div class="hero-slide-title" id="hero-slide-title">
+                            <span class="hero-slide-title-text">La Llegada</span>
+                        </div>
+                        <div class="hero-nav-controls">
+                            <div class="hero-nav-btn swiper-prev">ANT</div>
+                            <div class="hero-nav-indicator">
+                                <span class="current">01</span> / <span class="total">03</span>
+                                <div class="hero-nav-line">
+                                    <div class="hero-nav-progress"></div>
+                                </div>
+                            </div>
+                            <div class="hero-nav-btn swiper-next">SIG</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
-    <!-- About Section (CSS Grid) -->
+    <!-- About Section -->
     <section id="about" class="about section-padding">
         <div class="container">
             <div class="row mb-5 text-center reveal" data-reveal="fade-up">
                 <div class="col-12">
-                    <span class="accent-text">Discover</span>
-                    <h2 class="section-title">The Experience</h2>
-                    <p class="section-subtitle">A blend of nature and modern comfort</p>
+                    <span class="accent-text">Descubrir</span>
+                    <h2 class="section-title">Un Nuevo Estándar</h2>
+                    <p class="section-subtitle">Donde la arquitectura de vanguardia armoniza con la naturaleza</p>
                 </div>
             </div>
             <div class="about-grid">
                 <div class="about-item reveal" data-reveal="fade-up">
                     <div class="about-img-wrapper overflow-hidden">
-                        <img src="assets/image(13).jpg" alt="Experience 1" class="img-fluid about-img">
+                        <img src="assets/version-2/image(4).jpg" alt="Armonía - Espacios serenos en Ombara" class="img-fluid about-img">
                     </div>
                     <div class="about-text">
-                        <h3>Serenity</h3>
-                        <p>Find your peace in our beautifully designed spaces.</p>
+                        <h3>Armonía</h3>
+                        <p>Descubra una serenidad profunda en interiores cuidadosamente concebidos para el reposo y el equilibrio.</p>
                     </div>
                 </div>
                 <div class="about-item reveal delay-2" data-reveal="fade-up">
                     <div class="about-img-wrapper overflow-hidden">
-                        <img src="assets/image(3).jpg" alt="Experience 2" class="img-fluid about-img">
+                        <img src="assets/version-2/image(5).jpg" alt="Vitalidad - Bienestar holístico y spa en Ombara" class="img-fluid about-img">
                     </div>
                     <div class="about-text">
-                        <h3>Wellness</h3>
-                        <p>Rejuvenate your body and soul at our spa facilities.</p>
+                        <h3>Vitalidad</h3>
+                        <p>Restaure su bienestar interior con nuestros rituales holísticos de spa y terapias hidrotermales.</p>
                     </div>
                 </div>
                 <div class="about-item reveal delay-4" data-reveal="fade-up">
                     <div class="about-img-wrapper overflow-hidden">
-                        <img src="assets/image(7).jpg" alt="Experience 3" class="img-fluid about-img">
+                        <img src="assets/version-2/image(6).jpg" alt="Gastronomía - Experiencias culinarias en Ombara" class="img-fluid about-img">
                     </div>
                     <div class="about-text">
-                        <h3>Dining</h3>
-                        <p>Exquisite culinary experiences waiting for you.</p>
+                        <h3>Gastronomía</h3>
+                        <p>Saboree alta cocina de autor elaborada por reconocidos maestros de la gastronomía mundial.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Highlights Section (USPs) -->
     <section id="usps" class="usp-highlights section-padding">
         <div class="container">
             <div class="usp-highlights-head text-center reveal" data-reveal="fade-up">
-                <span class="accent-text">Exclusive Features</span>
-                <h2 class="section-title">Discover Where<br>Elevated Living Begins</h2>
+                <span class="accent-text">Atributos Exclusivos</span>
+                <h2 class="section-title">Redefiniendo el Lujo Costero</h2>
             </div>
 
             <div class="usp-highlights-grid">
                 <div class="usp-highlights-item reveal" data-reveal="fade-up">
                     <span class="usp-highlights-icon" aria-hidden="true"><i class="fa-solid fa-building"></i></span>
-                    <p>Exclusive Freehold<br>Seafront Address</p>
+                    <p>Ubicación Exclusiva<br>Frente al Mar</p>
                 </div>
 
                 <div class="usp-highlights-item reveal delay-06" data-reveal="fade-up">
                     <span class="usp-highlights-icon" aria-hidden="true"><i class="fa-solid fa-umbrella-beach"></i></span>
-                    <p>Private Access to<br>Pristine Beachfront</p>
+                    <p>Acceso Privado a<br>Playas Vírgenes</p>
                 </div>
 
                 <div class="usp-highlights-item reveal delay-12" data-reveal="fade-up">
                     <span class="usp-highlights-icon" aria-hidden="true"><i class="fa-solid fa-water"></i></span>
-                    <p>Panoramic Ocean<br>View Experience</p>
+                    <p>Vistas Panorámicas<br>al Océano</p>
                 </div>
 
                 <div class="usp-highlights-item reveal delay-18" data-reveal="fade-up">
                     <span class="usp-highlights-icon" aria-hidden="true"><i class="fa-solid fa-spa"></i></span>
-                    <p>Resort-Style Wellness<br>& Leisure Facilities</p>
+                    <p>Spa y Bienestar<br>Estilo Resort</p>
                 </div>
 
                 <div class="usp-highlights-item reveal delay-24" data-reveal="fade-up">
                     <span class="usp-highlights-icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
-                    <p>Thoughtfully Designed<br>Flexible Layouts</p>
+                    <p>Diseño Sofisticado y<br>Distribución Flexible</p>
                 </div>
 
                 <div class="usp-highlights-item reveal delay-3" data-reveal="fade-up">
                     <span class="usp-highlights-icon" aria-hidden="true"><i class="fa-solid fa-store"></i></span>
-                    <p>Retail Conveniences<br>Within Reach</p>
+                    <p>Boutiques y Servicios<br>a su Alcance</p>
                 </div>
 
                 <div class="usp-highlights-item reveal delay-36" data-reveal="fade-up">
                     <span class="usp-highlights-icon" aria-hidden="true"><i class="fa-solid fa-couch"></i></span>
-                    <p>Move-In Ready<br>Fully Furnished Homes</p>
+                    <p>Residencias Listas<br>Totalmente Amobladas</p>
                 </div>
 
                 <div class="usp-highlights-item reveal delay-42" data-reveal="fade-up">
                     <span class="usp-highlights-icon" aria-hidden="true"><i class="fa-solid fa-key"></i></span>
-                    <p>Smart Dual-Key<br>Investment Concept</p>
+                    <p>Concepto Inteligente<br>de Doble Llave</p>
                 </div>
 
                 <div class="usp-highlights-item reveal delay-48" data-reveal="fade-up">
                     <span class="usp-highlights-icon" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
-                    <p>Sustainable Living with<br>GreenRE Certification</p>
+                    <p>Vida Sostenible con<br>Certificación GreenRE</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Facilities Section (Split-screen layout & Tabs/Accordion) -->
+    <!-- Facilities Section -->
     <section id="facilities" class="facilities">
         <div class="facilities-split">
             <!-- Left Side: Image -->
             <div class="facilities-image-pane reveal reveal-media" data-reveal="fade-right">
-                <img src="assets/image(2).jpg" alt="Facilities" class="facilities-img">
+                <img src="assets/version-2/image(7).jpg" alt="Instalaciones de lujo frente al mar en Ombara" class="facilities-img">
             </div>
             
             <!-- Right Side: Content with Tabs -->
             <div class="facilities-content-pane">
                 <div class="facilities-inner reveal" data-reveal="fade-up">
-                    <span class="accent-text text-start">Indulge</span>
-                    <h2 class="section-title text-start mb-4">Our Facilities</h2>
+                    <span class="accent-text text-start">Sumergirse</span>
+                    <h2 class="section-title text-start mb-4">Amenidades de Clase Mundial</h2>
                     
-                    <!-- jQuery Tabs Container -->
+                    <!-- Tabs Container -->
                     <div class="fac-tabs">
                         <ul class="fac-tabs-nav">
-                            <li class="fac-tabs-item active" data-target="#tab-pool">Infinity Pool</li>
-                            <li class="fac-tabs-item" data-target="#tab-spa">Spa & Wellness</li>
-                            <li class="fac-tabs-item" data-target="#tab-gym">Fitness Center</li>
+                            <li class="fac-tabs-item active" data-target="#tab-pool">Piscina Infinita</li>
+                            <li class="fac-tabs-item" data-target="#tab-spa">Spa y Bienestar</li>
+                            <li class="fac-tabs-item" data-target="#tab-gym">Centro Fitness</li>
                         </ul>
                         
                         <div class="fac-tabs-content">
                             <div id="tab-pool" class="fac-tab-pane active">
-                                <h3>Infinity Pool</h3>
-                                <p>Dive into our stunning infinity pool overlooking the ocean. The perfect spot to watch the sunset with a cocktail in hand.</p>
-                                <img src="assets/image(5).jpg" alt="Pool" class="img-fluid mt-3">
+                                <h3>Piscina Infinita</h3>
+                                <p>Sumérjase en nuestra espectacular piscina infinita con vista al horizonte marino. El escenario ideal para contemplar el atardecer con un cóctel artesanal.</p>
+                                <img src="assets/version-2/image(8).jpg" alt="Piscina infinita con vista al horizonte marino" class="img-fluid mt-3">
                             </div>
                             <div id="tab-spa" class="fac-tab-pane">
-                                <h3>Spa & Wellness</h3>
-                                <p>Relax and unwind with our signature massage treatments using organic local ingredients.</p>
-                                <img src="assets/image(8).jpg" alt="Spa" class="img-fluid mt-3">
+                                <h3>Spa y Bienestar</h3>
+                                <p>Relájese y desconecte con masajes exclusivos y rituales corporales elaborados con ingredientes botánicos locales.</p>
+                                <img src="assets/version-2/image(9).jpg" alt="Santuario de spa y bienestar holístico" class="img-fluid mt-3">
                             </div>
                             <div id="tab-gym" class="fac-tab-pane">
-                                <h3>Fitness Center</h3>
-                                <p>Stay active during your vacation in our state-of-the-art gym equipped with the latest machines.</p>
-                                <img src="assets/image(4).jpg" alt="Gym" class="img-fluid mt-3">
+                                <h3>Centro Fitness</h3>
+                                <p>Mantenga su vitalidad durante sus vacaciones en nuestro moderno gimnasio, equipado con tecnología de vanguardia y vistas panorámicas.</p>
+                                <img src="assets/version-2/image(10).jpg" alt="Centro de acondicionamiento físico moderno con vistas al océano" class="img-fluid mt-3">
                             </div>
                         </div>
                     </div>
@@ -296,32 +319,32 @@
         </div>
     </section>
 
-    <!-- Rooms Preview Section -->
+    <!-- Rooms Section -->
     <section id="rooms" class="rooms section-padding">
         <div class="container">
             <div class="row mb-5 text-center reveal" data-reveal="fade-up">
                 <div class="col-12">
-                    <span class="accent-text">Residences</span>
-                    <h2 class="section-title">Luxurious Stays</h2>
-                    <p class="section-subtitle">Designed for your utmost comfort</p>
+                    <span class="accent-text">Santuarios</span>
+                    <h2 class="section-title">Alojamiento Excepcional</h2>
+                    <p class="section-subtitle">Diseñado para brindarle el más alto nivel de confort y privacidad</p>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 reveal" data-reveal="fade-up">
                     <div class="room-card overflow-hidden">
-                        <img src="assets/image(12).jpg" alt="Ocean Suite" class="img-fluid room-img">
+                        <img src="assets/version-2/image(11).jpg" alt="Suite Vista al Océano" class="img-fluid room-img">
                         <div class="room-info">
-                            <h3>Ocean View Suite</h3>
-                            <p>Spacious suite with a panoramic view of the sea.</p>
+                            <h3>Suite Vista al Océano</h3>
+                            <p>Espaciosa suite con balcón privado y espectaculares vistas al mar.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 reveal delay-2" data-reveal="fade-up">
                     <div class="room-card overflow-hidden">
-                        <img src="assets/image(10).jpg" alt="Garden Villa" class="img-fluid room-img">
+                        <img src="assets/version-2/image(12).jpg" alt="Villa Privada Jardín" class="img-fluid room-img">
                         <div class="room-info">
-                            <h3>Private Garden Villa</h3>
-                            <p>Exclusive villa surrounded by lush tropical gardens.</p>
+                            <h3>Villa Privada Jardín</h3>
+                            <p>Exclusiva villa rodeada de exuberantes jardines tropicales y máxima privacidad.</p>
                         </div>
                     </div>
                 </div>
@@ -329,21 +352,22 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
     <section id="gallery" class="gallery-scroll section-padding">
         <div class="container">
             <div class="gallery-scroll-shell">
                 <div class="gallery-scroll-intro reveal" data-reveal="fade-right">
-                    <span class="accent-text text-start">Gallery</span>
-                    <h2 class="section-title text-start">Discover the Ombak Experience</h2>
+                    <span class="accent-text text-start">Galería</span>
+                    <h2 class="section-title text-start">Una Mirada a Ombara</h2>
                     <p class="section-subtitle text-start">
-                       A seamless journey through refined spaces, coastal architecture, and thoughtfully crafted details.
+                       Un recorrido visual por espacios refinados, arquitectura costera y detalles sublimes.
                     </p>
                     <div class="gallery-scroll-copy">
                         <p>
-                            Each scene reveals another layer of the destination, capturing the balance between natural beauty and contemporary luxury.
+                            Cada espacio revela el equilibrio perfecto entre la serenidad natural y el diseño contemporáneo más refinado.
                         </p>
                         <p>
-                           Designed to immerse visitors in the atmosphere of Ombara before they even arrive.
+                            Concebido para transmitirle la esencia y calidez de Ombara incluso antes de su llegada.
                         </p>
                     </div>
                 </div>
@@ -351,45 +375,45 @@
                 <div class="gallery-scroll-track">
                     <div class="gallery-scroll-card reveal" data-reveal="fade-up">
                         <div class="gallery-scroll-media">
-                            <img src="assets/image(2).jpg" alt="Gallery oceanfront pool view" class="gallery-scroll-image">
+                            <img src="assets/version-2/image(13).jpg" alt="Horizonte Costero en Ombara" class="gallery-scroll-image">
                         </div>
                         <div class="gallery-scroll-content">
-                            <span class="gallery-scroll-kicker">01 / Arrival</span>
-                            <h3 class="gallery-scroll-title">Coastal Horizon</h3>
-                            <p class="gallery-scroll-text">A first impression shaped by open skies, quiet water, and soft architectural lines.</p>
+                            <span class="gallery-scroll-kicker">01 / Llegada</span>
+                            <h3 class="gallery-scroll-title">Horizonte Costero</h3>
+                            <p class="gallery-scroll-text">Una primera impresión moldeada por cielos abiertos, aguas calmas y líneas arquitectónicas suaves.</p>
                         </div>
                     </div>
 
                     <div class="gallery-scroll-card reveal delay-08" data-reveal="fade-up">
                         <div class="gallery-scroll-media">
-                            <img src="assets/image(5).jpg" alt="Gallery infinity pool scene" class="gallery-scroll-image">
+                            <img src="assets/version-2/image(14).jpg" alt="Luz del Resort en Ombara" class="gallery-scroll-image">
                         </div>
                         <div class="gallery-scroll-content">
-                            <span class="gallery-scroll-kicker">02 / Leisure</span>
-                            <h3 class="gallery-scroll-title">Resort Light</h3>
-                            <p class="gallery-scroll-text">Sun-washed amenities and framed ocean views create an effortless rhythm throughout the day.</p>
+                            <span class="gallery-scroll-kicker">02 / Descanso</span>
+                            <h3 class="gallery-scroll-title">Luz del Resort</h3>
+                            <p class="gallery-scroll-text">Ambientes bañados por el sol y encuadres al océano que marcan un ritmo apacible a lo largo del día.</p>
                         </div>
                     </div>
 
                     <div class="gallery-scroll-card reveal delay-16" data-reveal="fade-up">
                         <div class="gallery-scroll-media">
-                            <img src="assets/image(11).jpg" alt="Gallery suite interior" class="gallery-scroll-image">
+                            <img src="assets/version-2/image(15).jpg" alt="Calma Privada en Ombara" class="gallery-scroll-image">
                         </div>
                         <div class="gallery-scroll-content">
-                            <span class="gallery-scroll-kicker">03 / Stay</span>
-                            <h3 class="gallery-scroll-title">Private Calm</h3>
-                            <p class="gallery-scroll-text">Refined materials, warm textures, and generous space bring a more intimate residential feel.</p>
+                            <span class="gallery-scroll-kicker">03 / Estancia</span>
+                            <h3 class="gallery-scroll-title">Calma Privada</h3>
+                            <p class="gallery-scroll-text">Materiales nobles, texturas cálidas y generosa amplitud para una atmósfera íntima y residencial.</p>
                         </div>
                     </div>
 
                     <div class="gallery-scroll-card reveal delay-24" data-reveal="fade-up">
                         <div class="gallery-scroll-media">
-                            <img src="assets/image(8).jpg" alt="Gallery wellness atmosphere" class="gallery-scroll-image">
+                            <img src="assets/version-2/image(16).jpg" alt="Serenidad Total en Ombara" class="gallery-scroll-image">
                         </div>
                         <div class="gallery-scroll-content">
-                            <span class="gallery-scroll-kicker">04 / Restore</span>
-                            <h3 class="gallery-scroll-title">Wellness Mood</h3>
-                            <p class="gallery-scroll-text">The journey closes with spaces that feel slow, grounded, and deeply restorative.</p>
+                            <span class="gallery-scroll-kicker">04 / Bienestar</span>
+                            <h3 class="gallery-scroll-title">Serenidad Total</h3>
+                            <p class="gallery-scroll-text">Espacios concebidos para el sosiego, la reconexión y una profunda relajación reparadora.</p>
                         </div>
                     </div>
                 </div>
@@ -397,26 +421,27 @@
         </div>
     </section>
 
+    <!-- Feature Gallery Scroll Section -->
     <section class="feature-gallery-section" data-feature-gallery-scroll>
         <div class="feature-gallery-scroll__sticky">
             <div class="feature-gallery-scroll__slides">
                 <figure class="feature-gallery-scroll__slide is-active" data-feature-gallery-slide>
-                    <img src="assets/image(2).jpg" alt="Pool view at Ombara">
+                    <img src="assets/version-2/image(7).jpg" alt="Piscina Horizonte Infinito en Ombara">
                 </figure>
                 <figure class="feature-gallery-scroll__slide" data-feature-gallery-slide>
-                    <img src="assets/image(5).jpg" alt="Aegean Falls Cascading Pool at Ground Floor">
+                    <img src="assets/version-2/image(8).jpg" alt="Cascadas Aegean Falls en Planta Baja">
                 </figure>
                 <figure class="feature-gallery-scroll__slide" data-feature-gallery-slide>
-                    <img src="assets/image(1).jpg" alt="The Arrival at Ground Floor">
+                    <img src="assets/version-2/image(1).jpg" alt="La Gran Llegada en Planta Baja">
                 </figure>
                 <figure class="feature-gallery-scroll__slide" data-feature-gallery-slide>
-                    <img src="assets/image(12).jpg" alt="Lobby Reception at Ground Floor">
+                    <img src="assets/version-2/image(11).jpg" alt="Recepción y Concierge en Planta Baja">
                 </figure>
                 <figure class="feature-gallery-scroll__slide" data-feature-gallery-slide>
-                    <img src="assets/image(11).jpg" alt="The Play Garden at Level 8">
+                    <img src="assets/version-2/image(15).jpg" alt="Jardín Sky Play en Nivel 8">
                 </figure>
                 <figure class="feature-gallery-scroll__slide" data-feature-gallery-slide>
-                    <img src="assets/image(8).jpg" alt="Terrace by the Sea BBQ Pit and Lounge at Level 8">
+                    <img src="assets/version-2/image(16).jpg" alt="Terraza Lounge Frente al Mar en Nivel 8">
                 </figure>
             </div>
 
@@ -430,44 +455,45 @@
                 </div>
 
                 <div class="feature-gallery-scroll__card reveal" data-reveal="fade-up">
-                    <span class="feature-gallery-scroll__card-kicker" id="featureGalleryCardEyebrow">Gallery</span>
-                    <h2 class="feature-gallery-scroll__title" id="featureGalleryCardTitle">Pool</h2>
+                    <span class="feature-gallery-scroll__card-kicker" id="featureGalleryCardEyebrow">Planta Baja</span>
+                    <h2 class="feature-gallery-scroll__title" id="featureGalleryCardTitle">Piscina Horizonte Infinito</h2>
                     <div class="feature-gallery-scroll__card-media">
-                        <img id="featureGalleryCardImage" src="assets/image(2).jpg" alt="Pool view at Ombara">
+                        <img id="featureGalleryCardImage" src="assets/version-2/image(7).jpg" alt="Piscina Horizonte Infinito">
                     </div>
                     <p class="feature-gallery-scroll__card-text" id="featureGalleryCardText">
-                        Pool
+                        Tumbonas bañadas por el sol y horizontes oceánicos creados para tardes de puro descanso.
                     </p>
                 </div>
 
                 <div class="feature-gallery-scroll__meta">
-                    <button class="feature-gallery-scroll__skip" id="featureGallerySkipBtn" type="button" aria-label="Skip feature gallery">
-                        Skip
+                    <button class="feature-gallery-scroll__skip" id="featureGallerySkipBtn" type="button" aria-label="Saltar galería interactiva">
+                        Saltar
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
 
             <div class="feature-gallery-scroll__progress" aria-hidden="false">
-                <button class="feature-gallery-scroll__nav-button" id="featureGalleryPrevBtn" type="button" aria-label="Previous feature gallery slide">Prev</button>
+                <button class="feature-gallery-scroll__nav-button" id="featureGalleryPrevBtn" type="button" aria-label="Diapositiva anterior">Ant</button>
                 <div class="feature-gallery-scroll__progress-track" aria-hidden="true">
                     <span class="feature-gallery-scroll__progress-line"></span>
                     <span class="feature-gallery-scroll__progress-fill" id="featureGalleryProgressFill"></span>
                 </div>
-                <button class="feature-gallery-scroll__nav-button" id="featureGalleryNextBtn" type="button" aria-label="Next feature gallery slide">Next</button>
+                <button class="feature-gallery-scroll__nav-button" id="featureGalleryNextBtn" type="button" aria-label="Siguiente diapositiva">Sig</button>
             </div>
 
             <div class="feature-gallery-scroll__data" hidden>
-                <div data-feature-gallery-info data-eyebrow="Gallery" data-title="Pool" data-text="Pool"></div>
-                <div data-feature-gallery-info data-eyebrow="Ground Floor" data-title="Aegean Falls Cascading Pool" data-text="Aegean Falls Cascading Pool @ Ground Floor"></div>
-                <div data-feature-gallery-info data-eyebrow="Ground Floor" data-title="The Arrival" data-text="The Arrival @ Ground Floor"></div>
-                <div data-feature-gallery-info data-eyebrow="Ground Floor" data-title="Lobby Reception" data-text="Lobby Reception @ Ground Floor"></div>
-                <div data-feature-gallery-info data-eyebrow="Level 8" data-title="The Play Garden" data-text="The Play Garden @ Level 8"></div>
-                <div data-feature-gallery-info data-eyebrow="Level 8" data-title="Terrace by the Sea BBQ Pit &amp; Lounge" data-text="Terrace by the Sea BBQ Pit &amp; Lounge @ Level 8"></div>
+                <div data-feature-gallery-info data-eyebrow="Planta Baja" data-title="Piscina Horizonte Infinito" data-text="Tumbonas bañadas por el sol y horizontes oceánicos creados para tardes de puro descanso."></div>
+                <div data-feature-gallery-info data-eyebrow="Planta Baja" data-title="Cascadas Aegean Falls" data-text="Piscinas escalonadas enmarcadas por exuberante vegetación tropical y piedra volcánica."></div>
+                <div data-feature-gallery-info data-eyebrow="Planta Baja" data-title="La Gran Llegada Principal" data-text="Un acceso majestuoso que establece de inmediato una atmósfera de calma costera y distinción."></div>
+                <div data-feature-gallery-info data-eyebrow="Planta Baja" data-title="Recepción &amp; Concierge 24/7" data-text="Hospitalidad personalizada para asistirle en cada detalle desde el instante de su llegada."></div>
+                <div data-feature-gallery-info data-eyebrow="Nivel 8" data-title="Jardín Botánico Sky Play" data-text="Mirador botánico elevado al aire libre que combina brisa marina y serenidad panorámica."></div>
+                <div data-feature-gallery-info data-eyebrow="Nivel 8" data-title="Terraza Lounge Frente al Mar" data-text="Salón al atardecer para experiencias gastronómicas y veladas exclusivas bajo las estrellas."></div>
             </div>
         </div>
     </section>
 
+    <!-- Room Showcase Section -->
     <section class="room-showcase-section section-padding">
         <div class="container">
             <div class="row">
@@ -478,14 +504,14 @@
                                 class="room-showcase-trigger"
                                 type="button"
                                 data-iframe-src="https://www.youtube.com/embed/cdKx1Zv3YKs?si=Qt_JJys6fB6kgCAb"
-                                aria-label="Load immersive suite preview">
-                                <img src="assets/image(11).jpg" alt="Deluxe King room preview" class="room-showcase-image">
+                                aria-label="Cargar vista previa interactiva de la suite">
+                                <img src="assets/version-2/image(15).jpg" alt="Vista previa de la suite Deluxe King" class="room-showcase-image">
                                 <span class="room-showcase-play" aria-hidden="true"></span>
                             </button>
 
                             <iframe
                                 class="room-showcase-frame"
-                                title="External suite iframe preview"
+                                title="Recorrido virtual de la suite Deluxe King"
                                 loading="lazy"
                                 allow="autoplay; encrypted-media"
                                 allowfullscreen>
@@ -493,17 +519,17 @@
                         </div>
 
                         <div class="room-showcase-panel reveal" data-reveal="fade-right">
-                            <span class="room-showcase-kicker">Your Sanctuary</span>
-                            <h2 class="room-showcase-title h3">Deluxe King</h2>
+                            <span class="room-showcase-kicker">Su Refugio Privado</span>
+                            <h2 class="room-showcase-title h3">Suite Deluxe King</h2>
                             <p class="room-showcase-text">
-                                Unwind in the spacious Deluxe King room with warm wood tones, soft lighting,
-                                and a calm residential atmosphere for a more intimate stay experience.
+                                Descanse en la espaciosa Suite Deluxe King con cálidos tonos de madera noble, iluminación tenue
+                                y un ambiente residencial íntimo concebido para una estancia verdaderamente renovadora.
                             </p>
                             <div class="room-showcase-specs">
-                                <span class="room-showcase-spec">1 King Bed</span>
-                                <span class="room-showcase-spec">2 Guests</span>
+                                <span class="room-showcase-spec">1 Cama King</span>
+                                <span class="room-showcase-spec">2 Huéspedes</span>
                             </div>
-                            <button class="room-showcase-link" type="button" data-load-room-preview>Show More</button>
+                            <button class="room-showcase-link" type="button" data-load-room-preview><i class="fa-solid fa-play me-2"></i> Ver Recorrido en Video</button>
                         </div>
                     </div>
                 </div>
@@ -511,51 +537,70 @@
         </div>
     </section>
 
-    <!-- Register Section -->
+    <!-- Register / Contact Section -->
     <section id="register" class="register-section">
         <div class="register-split">
             <!-- Left Side: Image -->
             <div class="register-image-pane">
-                <img src="assets/image(9).jpg" alt="Register with Ombara" class="register-img">
+                <img src="assets/version-2/image(2).jpg" alt="Reserve su estancia en Ombara" class="register-img">
             </div>
             
             <!-- Right Side: Form -->
             <div class="register-form-pane">
                 <div class="register-inner">
-                    <h2 class="section-title">Take the First Step</h2>
-                    <p class="register-desc">Become a member of Ombara Club and take the first step towards a life filled with purpose, Wellness, and connection.</p>
+                    <h2 class="section-title">Reserve su Experiencia</h2>
+                    <p class="register-desc">Disfrute de una hospitalidad costera personalizada. Solicite información sobre suites privadas, retiros exclusivos o membresía Ombara.</p>
                     
-                    <form class="register-form" action="contact-submit.php" method="POST" data-form-label="Main Version Register">
+                    <form class="register-form" action="contact-submit.php" method="POST" data-form-label="Solicitud de Información">
+                        <input type="hidden" name="page_name" value="index.html">
+                        <input type="hidden" name="form_label" value="Solicitud de Información - Versión Oscura">
+
                         <div class="form-group">
-                            <label for="reg-name">Full Name</label>
-                            <input type="text" id="reg-name" name="name" placeholder="Enter your name" required>
+                            <label for="reg-name">Nombre Completo</label>
+                            <input type="text" id="reg-name" name="name" placeholder="Ej. Carlos Mendoza" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="reg-email">Email Address</label>
-                            <input type="email" id="reg-email" name="email" placeholder="Enter your email address" required>
+                            <label for="reg-email">Correo Electrónico</label>
+                            <input type="email" id="reg-email" name="email" placeholder="carlos@ejemplo.com" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="reg-phone">Phone Number</label>
+                            <label for="reg-phone">Teléfono de Contacto</label>
                             <div class="phone-input-wrap">
-                                <select id="reg-country-code" name="country_code" aria-label="Country Code">
-                                    <option value="+1">+1</option>
-                                    <option value="+60" selected>+60</option>
-                                    <option value="+62">+62</option>
+                                <select id="reg-country-code" name="country_code" aria-label="Código de país">
+                                    <option value="+34" selected>+34 (ES)</option>
+                                    <option value="+52">+52 (MX)</option>
+                                    <option value="+57">+57 (CO)</option>
+                                    <option value="+54">+54 (AR)</option>
+                                    <option value="+56">+56 (CL)</option>
+                                    <option value="+51">+51 (PE)</option>
+                                    <option value="+1">+1 (US/CA)</option>
+                                    <option value="+62">+62 (ID)</option>
+                                    <option value="+44">+44 (UK)</option>
+                                    <option value="+49">+49 (DE)</option>
+                                    <option value="+33">+33 (FR)</option>
                                 </select>
-                                <input type="tel" id="reg-phone" name="phone" placeholder="Enter your phone number" required>
+                                <input type="tel" id="reg-phone" name="phone" placeholder="Número de teléfono" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="reg-country">Country</label>
+                            <label for="reg-country">País de Residencia</label>
                             <div class="select-wrap">
                                 <select id="reg-country" name="country">
-                                    <option value="United States">United States</option>
-                                    <option value="Malaysia" selected>Malaysia</option>
+                                    <option value="España" selected>España</option>
+                                    <option value="México">México</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Chile">Chile</option>
+                                    <option value="Perú">Perú</option>
+                                    <option value="Estados Unidos">Estados Unidos</option>
                                     <option value="Indonesia">Indonesia</option>
-                                    <option value="Singapore">Singapore</option>
+                                    <option value="Reino Unido">Reino Unido</option>
+                                    <option value="Alemania">Alemania</option>
+                                    <option value="Francia">Francia</option>
+                                    <option value="Otro país">Otro país</option>
                                 </select>
                             </div>
                         </div>
@@ -564,12 +609,12 @@
                             <label class="custom-checkbox">
                                 <input type="checkbox" name="terms" required>
                                 <span class="checkmark"></span>
-                                <span class="checkbox-label">I agree to the <span class="color">Policies and Terms</span></span>
+                                <span class="checkbox-label">Acepto las <a href="offer.html" target="_blank" class="color" style="text-decoration: underline;">Políticas y Términos</a></span>
                             </label>
                         </div>
                         
                         <button type="submit" class="register-submit-btn">
-                            Register Now
+                            Solicitar Información
                         </button>
                     </form>
                 </div>
@@ -583,12 +628,12 @@
             <div class="footer-shell">
                 <div class="footer-brand">
                     <h3 class="footer-title"><img src="assets/logo-white.png" alt="Ombara" class="preloader-logo"></h3>
-                    <p class="footer-text">Beachfront living with understated coastal luxury, crafted for slow mornings and elevated resort stays.</p>
+                    <p class="footer-text">Residencias privadas frente al mar con hospitalidad de resort de lujo, concebidas para mañanas serenas y estancias inolvidables.</p>
                 </div>
 
                 <div class="footer-links-wrap">
                     <div class="footer-links-group">
-                        <span class="footer-label">Explore</span>
+                        <span class="footer-label">Explorar</span>
                         <a href="https://www.instagram.com/" target="_blank" class="footer-link">Instagram</a>
                         <a href="https://www.facebook.com/" target="_blank" class="footer-link">Facebook</a>
                         <a href="https://www.waze.com/" target="_blank" class="footer-link">Waze</a>
@@ -596,22 +641,218 @@
                     </div>
 
                     <div class="footer-links-group">
-                        <span class="footer-label">Contact</span>
-                        <a href="tel:+60000000000" class="footer-link">+62 111 222 333</a>
-                        <a href="mailto:hello@oskombak.com" class="footer-link">hello@ombara.com</a>
+                        <span class="footer-label">Contacto</span>
+                        <a href="tel:+62111222333" class="footer-link">+62 111 222 333</a>
+                        <a href="mailto:hello@ombara.com" class="footer-link">hello@ombara.com</a>
                         <span class="footer-meta">Bali, Indonesia</span>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <span class="footer-meta">Private coastal residences with a resort point of view.</span>
-                <span class="footer-meta">&copy; 2026 Ombara Bali. All rights reserved.</span>
+                <span class="footer-meta">Residencias costeras privadas con visión de resort de lujo.</span>
+                <span class="footer-meta">&copy; 2026 Ombara Bali. Todos los derechos reservados.</span>
             </div>
         </div>
     </footer>
 
-    <button class="to-top" id="toTopBtn" type="button" aria-label="Back to top">
+    <!-- Luxury Direct Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <span class="accent-text text-start fs-4 d-block mb-0">Reserva Directa</span>
+                        <h2 class="modal-title h4 text-light mb-0" id="bookingModalLabel">Reserve su Estancia en Ombara</h2>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="register-form reservation-engine-form" id="modalBookingForm" action="booking-submit.php" method="POST" data-form-label="Reserva Directa de Estancia">
+                        <input type="hidden" name="page_name" value="index.html">
+                        <input type="hidden" name="form_label" value="Reserva Directa - Versión Oscura">
+
+                        <!-- Personal Information -->
+                        <div class="row g-3">
+                            <div class="col-md-6 form-group">
+                                <label for="modal-name">Nombre Completo *</label>
+                                <input type="text" id="modal-name" name="name" placeholder="Ej. Sofía Hernández" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="modal-email">Correo Electrónico *</label>
+                                <input type="email" id="modal-email" name="email" placeholder="sofia@ejemplo.com" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="modal-phone">Teléfono de Contacto *</label>
+                                <div class="phone-input-wrap">
+                                    <select id="modal-country-code" name="country_code" aria-label="Código de país">
+                                        <option value="+34" selected>+34 (ES)</option>
+                                        <option value="+52">+52 (MX)</option>
+                                        <option value="+57">+57 (CO)</option>
+                                        <option value="+54">+54 (AR)</option>
+                                        <option value="+56">+56 (CL)</option>
+                                        <option value="+51">+51 (PE)</option>
+                                        <option value="+1">+1 (US/CA)</option>
+                                        <option value="+62">+62 (ID)</option>
+                                        <option value="+44">+44 (UK)</option>
+                                        <option value="+49">+49 (DE)</option>
+                                        <option value="+33">+33 (FR)</option>
+                                    </select>
+                                    <input type="tel" id="modal-phone" name="phone" placeholder="Número de teléfono" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="modal-country">País de Residencia</label>
+                                <div class="select-wrap">
+                                    <select id="modal-country" name="country">
+                                        <option value="España" selected>España</option>
+                                        <option value="México">México</option>
+                                        <option value="Colombia">Colombia</option>
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="Chile">Chile</option>
+                                        <option value="Perú">Perú</option>
+                                        <option value="Estados Unidos">Estados Unidos</option>
+                                        <option value="Indonesia">Indonesia</option>
+                                        <option value="Reino Unido">Reino Unido</option>
+                                        <option value="Alemania">Alemania</option>
+                                        <option value="Francia">Francia</option>
+                                        <option value="Otro país">Otro país</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stay Details -->
+                        <div class="row g-3 mt-1">
+                            <div class="col-md-6 form-group">
+                                <label for="res-room-type">Categoría de Habitación / Suite *</label>
+                                <div class="select-wrap">
+                                    <select id="res-room-type" name="room_type" required>
+                                        <option value="Ocean View Suite" data-rate="220" selected>Suite Vista al Océano — $220 / noche</option>
+                                        <option value="Garden Villa" data-rate="180">Villa Privada Jardín — $180 / noche</option>
+                                        <option value="Deluxe King Residence" data-rate="260">Residencia Deluxe King — $260 / noche</option>
+                                        <option value="Family Residence" data-rate="310">Residencia Familiar — $310 / noche</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="modal-payment-method">Método de Pago *</label>
+                                <div class="select-wrap">
+                                    <select id="modal-payment-method" name="payment_method" required>
+                                        <option value="" selected disabled>Selecciona un método</option>
+                                        <option value="credit_card">Tarjeta de crédito</option>
+                                        <option value="debit_card">Tarjeta de débito</option>
+                                        <option value="bank_transfer">Transferencia bancaria</option>
+                                        <option value="cash">Efectivo en el hotel</option>
+                                        <option value="online">Pago en línea</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 form-group">
+                                <label for="res-adults">Adultos</label>
+                                <input type="number" id="res-adults" name="adults" min="1" max="6" value="2" required>
+                            </div>
+                            <div class="col-md-3 col-6 form-group">
+                                <label for="res-children">Niños</label>
+                                <input type="number" id="res-children" name="children" min="0" max="6" value="0">
+                            </div>
+                        </div>
+
+                        <!-- Dates -->
+                        <div class="row g-3 mt-1">
+                            <div class="col-md-6 form-group">
+                                <label for="res-check-in">Fecha de Llegada (Check-in) *</label>
+                                <input type="date" id="res-check-in" name="check_in" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="res-check-out">Fecha de Salida (Check-out) *</label>
+                                <input type="date" id="res-check-out" name="check_out" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="res-requests">Peticiones Especiales (Opcional)</label>
+                            <textarea id="res-requests" name="special_requests" rows="2" placeholder="Transporte al aeropuerto, piso alto, preferencias dietéticas..."></textarea>
+                        </div>
+
+                        <!-- Real-time Cost Summary -->
+                        <div class="booking-summary-box" id="bookingSummaryBox">
+                            <div class="booking-summary-header">
+                                <span class="booking-summary-title">Resumen de la Reserva</span>
+                                <span class="booking-summary-badge" id="summaryRoomBadge">Suite Vista al Océano</span>
+                            </div>
+                            <div class="booking-summary-row">
+                                <span>Duración de la Estancia:</span>
+                                <strong id="summaryNights">2 Noches</strong>
+                            </div>
+                            <div class="booking-summary-row">
+                                <span>Tarifa por Noche:</span>
+                                <span id="summaryRate">$220.00 USD</span>
+                            </div>
+                            <div class="booking-summary-total">
+                                <span>Total Estimado:</span>
+                                <span class="total-amount" id="summaryTotal">$440.00 USD</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group terms-group">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="terms" required>
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">Acepto las <a href="offer.html" target="_blank" class="color" style="text-decoration: underline;">Políticas de Reserva y Términos del Hotel</a></span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="register-submit-btn" id="btnSubmitBooking">
+                            <i class="fa-solid fa-lock me-1"></i> Confirmar y Reservar Estancia
+                        </button>
+                    </form>
+
+                    <!-- Confirmation Voucher Card -->
+                    <div class="booking-voucher-card" id="bookingVoucherCard">
+                        <div class="voucher-header">
+                            <div class="voucher-icon"><i class="fa-solid fa-check"></i></div>
+                            <h3>¡Reserva Confirmada!</h3>
+                            <p class="text-muted small mb-2">Su estancia ha sido registrada directamente en el sistema de reservas de Ombara.</p>
+                            <div class="voucher-code-wrap">
+                                <span class="voucher-code-label">Referencia de Reserva (PNR)</span>
+                                <span class="voucher-code-value" id="voucherCode">OMB-2026-XXXX</span>
+                            </div>
+                        </div>
+                        <div class="voucher-details-grid">
+                            <div class="voucher-detail-item">
+                                <span class="voucher-detail-label">Huésped</span>
+                                <span class="voucher-detail-value" id="voucherGuest">Sofía Hernández</span>
+                            </div>
+                            <div class="voucher-detail-item">
+                                <span class="voucher-detail-label">Habitación</span>
+                                <span class="voucher-detail-value" id="voucherRoom">Suite Vista al Océano</span>
+                            </div>
+                            <div class="voucher-detail-item">
+                                <span class="voucher-detail-label">Fechas</span>
+                                <span class="voucher-detail-value" id="voucherDates">12 Oct &rarr; 15 Oct</span>
+                            </div>
+                            <div class="voucher-detail-item">
+                                <span class="voucher-detail-label">Monto Total</span>
+                                <span class="voucher-detail-value" id="voucherTotal">$440.00 USD</span>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3 d-flex justify-content-center gap-2">
+                            <button type="button" class="btn btn-outline-light btn-sm" onclick="window.print()">
+                                <i class="fa-solid fa-print me-1"></i> Imprimir Comprobante
+                            </button>
+                            <button type="button" class="btn btn-warning btn-sm" data-bs-dismiss="modal">
+                                Cerrar Ventana
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <button class="to-top" id="toTopBtn" type="button" aria-label="Volver arriba">
         <span class="to-top-label" aria-hidden="true">
             <i class="fa-solid fa-chevron-up"></i>
         </span>
@@ -626,7 +867,7 @@
     <!-- Bootstrap Bundle JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- Lenis Smooth Scroll API -->
-    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script src="js/lenis.min.js"></script>
     <!-- Swiper JS -->
     <script src="js/swiper-bundle.min.js"></script>
     <!-- Custom JS -->

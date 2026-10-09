@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración | Mockup Ombara</title>
+    <link rel="icon" type="image/png" href="../../assets/ico.png">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <style>
+        :root { --bg:#121921; --surface:#1a222c; --line:rgba(255,255,255,.09); --gold:#c5a880; --text:#e6dfd7; --muted:rgba(230,223,215,.65); }
+        body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+        .topbar { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 2rem; border-bottom:1px solid rgba(197,168,128,.25); }
+        .brand { display:flex; align-items:center; gap:.8rem; color:var(--gold); text-decoration:none; font-weight:700; }
+        .muted { color:var(--muted); }
+        .metric,.panel { height:100%; padding:1.25rem; background:var(--surface); border:1px solid var(--line); border-radius:6px; }
+        .metric-label { color:var(--muted); font-size:.78rem; text-transform:uppercase; }
+        .metric-value { margin:.4rem 0 0; color:var(--gold); font-size:1.8rem; font-weight:700; }
+        .panel { margin-top:1.25rem; }
+        .table { --bs-table-color:var(--text); --bs-table-bg:transparent; --bs-table-border-color:var(--line); margin:0; }
+        .table thead th { color:var(--gold); font-size:.72rem; text-transform:uppercase; white-space:nowrap; }
+        .table td { vertical-align:middle; }
+        .pnr { color:var(--gold); font-family:monospace; font-weight:700; }
+        .badge-soft { display:inline-block; padding:.25rem .55rem; border:1px solid currentColor; border-radius:20px; font-size:.75rem; white-space:nowrap; }
+        .status-ok { color:#81c784; } .status-wait { color:#ffb74d; } .status-fail { color:#ef9a9a; }
+        .nav-tabs { border-color:var(--line); }
+        .nav-tabs .nav-link { color:var(--muted); border:0; border-bottom:2px solid transparent; }
+        .nav-tabs .nav-link.active { color:var(--gold); background:transparent; border-bottom-color:var(--gold); }
+        .table-search { max-width:260px; color:var(--text); background:#121921; border-color:rgba(255,255,255,.18); }
+        .table-search:focus { color:var(--text); background:#121921; border-color:var(--gold); box-shadow:0 0 0 .2rem rgba(197,168,128,.15); }
+        @media(max-width:767.98px) { .topbar { align-items:flex-start; padding:1rem; } .topbar-actions { display:grid; grid-template-columns:1fr 1fr; gap:.5rem; } .panel { padding:1rem; } .panel-tools { align-items:stretch!important; flex-direction:column; } .table-search { max-width:none; } }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo-white.png" alt="Ombara" height="30"><span>Gestión Hotelera</span></a>
+        <nav class="topbar-actions d-flex align-items-center gap-2" aria-label="Navegación principal">
+            <a href="reception-mockup.html" class="btn btn-outline-light btn-sm"><i class="fa-solid fa-bell-concierge me-1"></i> Recepción</a>
+            <a href="users.php" class="btn btn-outline-light btn-sm"><i class="fa-solid fa-users-gear me-1"></i> Personal</a>
+            <a href="../../index.html" class="btn btn-outline-light btn-sm"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Sitio web</a>
+        </nav>
+    </header>
+
+    <main class="container-fluid px-lg-5 py-4">
+        <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+            <div><p class="muted text-uppercase small mb-1">Panel de control · Mockup</p><h1 class="h3 mb-1">Resumen administrativo</h1><p class="muted mb-0">Actividad y comunicación del hotel</p></div>
+            <button class="btn btn-outline-light btn-sm" type="button" onclick="window.print()"><i class="fa-solid fa-print me-1"></i> Imprimir</button>
+        </div>
+
+        <section class="row g-3" aria-label="Indicadores principales">
+            <div class="col-12 col-md-4"><article class="metric"><div class="metric-label"><i class="fa-solid fa-calendar-check me-2"></i>Reservas registradas</div><p class="metric-value">248</p><small class="muted">+12 este mes</small></article></div>
+            <div class="col-12 col-md-4"><article class="metric"><div class="metric-label"><i class="fa-solid fa-dollar-sign me-2"></i>Ingresos acumulados</div><p class="metric-value">$86,420</p><small class="muted">USD · año en curso</small></article></div>
+            <div class="col-12 col-md-4"><article class="metric"><div class="metric-label"><i class="fa-solid fa-address-book me-2"></i>Consultas recibidas</div><p class="metric-value">37</p><small class="muted">8 pendientes de seguimiento</small></article></div>
+        </section>
+
+        <section class="panel" aria-label="Actividad del hotel">
+            <ul class="nav nav-tabs mb-4" id="adminTabs" role="tablist">
+                <li class="nav-item" role="presentation"><button class="nav-link active" id="reservations-tab" data-bs-toggle="tab" data-bs-target="#reservations" type="button" role="tab" aria-controls="reservations" aria-selected="true"><i class="fa-solid fa-bed me-2"></i>Reservas recientes <span class="ms-1">(4)</span></button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="contacts-tab" data-bs-toggle="tab" data-bs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false"><i class="fa-solid fa-address-book me-2"></i>Consultas de contacto</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="notifications-tab" data-bs-toggle="tab" data-bs-target="#notifications" type="button" role="tab" aria-controls="notifications" aria-selected="false"><i class="fa-solid fa-paper-plane me-2"></i>Notificaciones</button></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="reservations" role="tabpanel" aria-labelledby="reservations-tab" tabindex="0">
+                    <div class="panel-tools d-flex justify-content-between align-items-center gap-3 mb-3"><div><h2 class="h5 mb-1">Reservas recientes</h2><p class="muted small mb-0">Últimas reservas registradas</p></div><input class="form-control form-control-sm table-search" type="search" placeholder="Buscar huésped o código" aria-label="Buscar reservas" data-filter="reservations-table"></div>
+                    <div class="table-responsive"><table class="table table-hover" id="reservations-table"><thead><tr><th>Código</th><th>Huésped</th><th>Habitación</th><th>Llegada</th><th>Salida</th><th>Noches</th><th>Personas</th><th>Total USD</th><th>Estado</th></tr></thead><tbody>
+                        <tr><td><span class="pnr">OMB-26094</span></td><td><strong>Amara Wijaya</strong><br><small class="muted">amara.w@example.com · +62 812 4567 8910</small></td><td>Ocean View Suite<br><small class="muted">N.º 204</small></td><td>12 oct 2026</td><td>16 oct 2026</td><td>4</td><td>2 ad. / 0 niñ.</td><td><strong>$1,240.00</strong></td><td><span class="badge-soft status-ok">Confirmada</span></td></tr>
+                        <tr><td><span class="pnr">OMB-26093</span></td><td><strong>Daniel Hartono</strong><br><small class="muted">daniel.h@example.com · +62 811 3200 4412</small></td><td>Garden Villa<br><small class="muted">N.º 108</small></td><td>14 oct 2026</td><td>18 oct 2026</td><td>4</td><td>2 ad. / 1 niñ.</td><td><strong>$980.00</strong></td><td><span class="badge-soft status-wait">Pendiente</span></td></tr>
+                        <tr><td><span class="pnr">OMB-26092</span></td><td><strong>Sofia Pratama</strong><br><small class="muted">sofia.p@example.com · +62 813 6621 9001</small></td><td>Deluxe King Residence<br><small class="muted">N.º 302</small></td><td>19 oct 2026</td><td>22 oct 2026</td><td>3</td><td>2 ad. / 0 niñ.</td><td><strong>$1,110.00</strong></td><td><span class="badge-soft status-ok">Confirmada</span></td></tr>
+                        <tr><td><span class="pnr">OMB-26091</span></td><td><strong>Lucas Mendoza</strong><br><small class="muted">lucas.m@example.com · +34 612 334 980</small></td><td>Family Residence</td><td>21 oct 2026</td><td>27 oct 2026</td><td>6</td><td>2 ad. / 2 niñ.</td><td><strong>$2,460.00</strong></td><td><span class="badge-soft status-ok">Confirmada</span></td></tr>
+                    </tbody></table></div>
+                </div>
+                <div class="tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab" tabindex="0">
+                    <div class="d-flex justify-content-between align-items-center mb-3"><div><h2 class="h5 mb-1">Consultas de contacto</h2><p class="muted small mb-0">Solicitudes recibidas desde el sitio web</p></div><input class="form-control form-control-sm table-search" type="search" placeholder="Buscar contacto" aria-label="Buscar contactos" data-filter="contacts-table"></div>
+                    <div class="table-responsive"><table class="table table-hover" id="contacts-table"><thead><tr><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>País</th><th>Origen</th><th>Fecha</th><th>Seguimiento</th></tr></thead><tbody>
+                        <tr><td><strong>Mei Tan</strong></td><td>mei.tan@example.com</td><td>+65 9123 0045</td><td>Singapur</td><td>Contacto</td><td>08 oct 2026</td><td><span class="badge-soft status-wait">Pendiente</span></td></tr>
+                        <tr><td><strong>Rafael Costa</strong></td><td>rafael.c@example.com</td><td>+55 11 99221 4000</td><td>Brasil</td><td>Oferta</td><td>07 oct 2026</td><td><span class="badge-soft status-ok">Respondida</span></td></tr>
+                        <tr><td><strong>Nadia Rahman</strong></td><td>nadia.r@example.com</td><td>+60 12 660 9182</td><td>Malasia</td><td>Habitaciones</td><td>06 oct 2026</td><td><span class="badge-soft status-wait">Pendiente</span></td></tr>
+                    </tbody></table></div>
+                </div>
+                <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab" tabindex="0">
+                    <div class="mb-3"><h2 class="h5 mb-1">Registro de notificaciones</h2><p class="muted small mb-0">Estado de los avisos enviados a los huéspedes</p></div>
+                    <div class="table-responsive"><table class="table table-hover"><thead><tr><th>Reserva</th><th>Canal</th><th>Destinatario</th><th>Resultado</th><th>Fecha</th></tr></thead><tbody>
+                        <tr><td><span class="pnr">OMB-26094</span></td><td>Correo</td><td>amara.w@example.com</td><td><span class="badge-soft status-ok">Enviado</span></td><td>09 oct 2026 · 09:42</td></tr>
+                        <tr><td><span class="pnr">OMB-26093</span></td><td>WhatsApp</td><td>+62 811 3200 4412</td><td><span class="badge-soft status-ok">Enviado</span></td><td>09 oct 2026 · 08:17</td></tr>
+                        <tr><td><span class="pnr">OMB-26090</span></td><td>Correo</td><td>guest@example.com</td><td><span class="badge-soft status-fail">Fallido</span></td><td>08 oct 2026 · 18:26</td></tr>
+                    </tbody></table></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('[data-filter]').forEach((input) => {
+            input.addEventListener('input', () => {
+                const table = document.getElementById(input.dataset.filter);
+                const query = input.value.trim().toLocaleLowerCase('es');
+                table.querySelectorAll('tbody tr').forEach((row) => {
+                    row.hidden = !row.textContent.toLocaleLowerCase('es').includes(query);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

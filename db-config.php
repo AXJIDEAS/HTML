@@ -107,6 +107,8 @@ function ensureTablesExist(PDO $pdo): void
                 `children` INT NOT NULL DEFAULT 0,
                 `total_nights` INT NOT NULL DEFAULT 1,
                 `total_price` DECIMAL(10, 2) NOT NULL DEFAULT 0.00,
+                `payment_method` ENUM('cash', 'debit_card', 'credit_card', 'bank_transfer', 'online') DEFAULT NULL,
+                `payment_status` ENUM('pending', 'paid') NOT NULL DEFAULT 'pending',
                 `special_requests` TEXT NULL,
                 `status` ENUM('confirmed', 'pending', 'cancelled') NOT NULL DEFAULT 'confirmed',
                 `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -116,6 +118,24 @@ function ensureTablesExist(PDO $pdo): void
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
         ");
     }
+
+    $reservationColumns = $pdo->query("SHOW COLUMNS FROM `reservations`")->fetchAll(PDO::FETCH_COLUMN);
+    if (!in_array('payment_method', $reservationColumns, true)) {
+        $pdo->exec("ALTER TABLE `reservations` ADD `payment_method` ENUM('cash', 'debit_card', 'credit_card', 'bank_transfer', 'online') DEFAULT NULL AFTER `total_price`");
+    }
+    if (!in_array('payment_status', $reservationColumns, true)) {
+        $pdo->exec("ALTER TABLE `reservations` ADD `payment_status` ENUM('pending', 'paid') NOT NULL DEFAULT 'pending' AFTER `payment_method`");
+    }
+
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS `rooms` (
+            `id` INT AUTO_INCREMENT PRIMARY KEY,
+            `room_number` VARCHAR(20) NOT NULL UNIQUE,
+            `room_type` VARCHAR(100) NOT NULL,
+            `status` ENUM('available', 'occupied', 'maintenance', 'cleaning') NOT NULL DEFAULT 'available',
+            `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    ");
 
     $memberTableCheck = $pdo->query("SHOW TABLES LIKE 'memberships'");
     if ($memberTableCheck->rowCount() === 0) {

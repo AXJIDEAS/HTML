@@ -113,3 +113,253 @@ body[data-bs-theme="dark"] .room-showcase-spec {
 body[data-bs-theme="dark"] .to-top {
     color: rgba(255, 255, 255, 0.84);
 }
+
+/* =========================================
+   HERO BOOKING BAR (DARK LUXURY)
+   ========================================= */
+.hero-booking-bar-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 1.75rem auto 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-booking-bar {
+    background: rgba(18, 25, 33, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(197, 168, 128, 0.4);
+    border-radius: 12px;
+    padding: 1.15rem 1.6rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(197, 168, 128, 0.15);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1.1rem;
+    transition: all 0.35s ease;
+}
+
+.hero-booking-bar:hover {
+    border-color: rgba(197, 168, 128, 0.7);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 38px rgba(197, 168, 128, 0.25);
+}
+
+.hero-booking-field {
+    flex: 1 1 170px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.hero-booking-field-sm {
+    flex: 0 1 125px;
+}
+
+.hero-booking-label {
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #c5a880;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hero-booking-input {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 6px;
+    color: #e6dfd7;
+    font-size: 0.92rem;
+    padding: 0.65rem 0.85rem;
+    width: 100%;
+    outline: none;
+    transition: all 0.25s ease;
+    font-family: inherit;
+}
+
+.hero-booking-input:focus {
+    border-color: #c5a880;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.2);
+}
+
+.hero-booking-input option {
+    background: #121921;
+    color: #e6dfd7;
+}
+
+.hero-booking-action {
+    flex: 0 0 auto;
+}
+
+.hero-booking-btn {
+    background: linear-gradient(135deg, #c5a880 0%, #a8895e 100%);
+    color: #0e263a;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.85rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(197, 168, 128, 0.35);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.hero-booking-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(197, 168, 128, 0.55);
+    background: linear-gradient(135deg, #d8bf9c 0%, #b8986c 100%);
+    color: #0b1d2e;
+}
+
+.hero-booking-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 0.65rem;
+    font-size: 0.82rem;
+    color: rgba(230, 223, 215, 0.75);
+    padding: 0 0.5rem;
+}
+
+.hero-booking-meta-rate {
+    color: #c5a880;
+    font-weight: 600;
+}
+
+/* =========================================
+   DARK THEME BOOKING MODAL
+   ========================================= */
+body[data-bs-theme="dark"] .modal-content {
+    background-color: #121921;
+    border: 1px solid rgba(197, 168, 128, 0.35);
+    color: var(--color-primary);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+}
+
+body[data-bs-theme="dark"] .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem 2rem 1rem;
+}
+
+body[data-bs-theme="dark"] .modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+body[data-bs-theme="dark"] .modal-body {
+    padding: 1.5rem 2rem 2rem;
+}
+
+body[data-bs-theme="dark"] .booking-summary-box {
+    background: #1a222c;
+    border: 1px solid rgba(197, 168, 128, 0.3);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+}
+
+body[data-bs-theme="dark"] .booking-summary-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body[data-bs-theme="dark"] .booking-summary-title {
+    color: #e6dfd7;
+}
+
+body[data-bs-theme="dark"] .booking-summary-badge {
+    background: #c5a880;
+    color: #0e263a;
+    font-weight: 600;
+}
+
+body[data-bs-theme="dark"] .booking-summary-row {
+    color: rgba(230, 223, 215, 0.75);
+}
+
+body[data-bs-theme="dark"] .booking-summary-row strong,
+body[data-bs-theme="dark"] .booking-summary-row span:last-child {
+    color: #e6dfd7;
+}
+
+body[data-bs-theme="dark"] .booking-summary-total {
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    color: #e6dfd7;
+}
+
+body[data-bs-theme="dark"] .booking-summary-total .total-amount {
+    color: #c5a880;
+}
+
+body[data-bs-theme="dark"] .booking-voucher-card {
+    background: #1a222c;
+    border: 2px solid #c5a880;
+    color: #e6dfd7;
+}
+
+body[data-bs-theme="dark"] .voucher-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body[data-bs-theme="dark"] .voucher-header h3 {
+    color: #e6dfd7;
+}
+
+body[data-bs-theme="dark"] .voucher-code-wrap {
+    background: rgba(197, 168, 128, 0.1);
+    border: 1px dashed #c5a880;
+}
+
+body[data-bs-theme="dark"] .voucher-code-value {
+    color: #c5a880;
+}
+
+body[data-bs-theme="dark"] .voucher-detail-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body[data-bs-theme="dark"] .voucher-detail-label {
+    color: rgba(230, 223, 215, 0.6);
+}
+
+body[data-bs-theme="dark"] .voucher-detail-value {
+    color: #e6dfd7;
+}
+
+@media (max-width: 991px) {
+    .hero-booking-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.85rem;
+    }
+    
+    .hero-booking-field,
+    .hero-booking-field-sm,
+    .hero-booking-action {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+    
+    .hero-booking-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-booking-meta {
+        flex-direction: column;
+        text-align: center;
+    }
+}

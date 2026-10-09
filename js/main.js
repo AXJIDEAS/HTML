@@ -59,6 +59,10 @@ if (lenis) {
     requestAnimationFrame(raf);
 }
 
+const bookingModal = document.getElementById('bookingModal');
+bookingModal?.addEventListener('show.bs.modal', () => lenis?.stop());
+bookingModal?.addEventListener('hidden.bs.modal', () => lenis?.start());
+
 let preloaderHidden = false;
 let heroTitleTransitionTimer;
 const $window = $(window);
@@ -81,8 +85,8 @@ function hidePreloader() {
 
         window.setTimeout(() => {
             $preloader.remove();
-        }, 900);
-    }, 1500);
+        }, 500);
+    }, 250);
 }
 
 function updateHeroMeta(index, titles) {
@@ -328,7 +332,10 @@ function initFeatureGalleryScroll() {
 }
 
 $(document).ready(function () {
-    const slideTitles = ['The Arrival', 'Coastal Living', 'Ocean View'];
+    const isSpanishPage = $('html').attr('lang') === 'es';
+    const slideTitles = isSpanishPage
+        ? ['La Llegada', 'Vida Costera', 'Vista al Mar']
+        : ['The Arrival', 'Coastal Living', 'Ocean View'];
     const $header = $('.header').first();
     const header = $header.get(0);
     const $footer = $('.footer').first();
@@ -344,46 +351,20 @@ $(document).ready(function () {
         if (!header) return;
 
         const delta = scrollY - lastHeaderScrollY;
-        const $heroSection = $('#home');
-        const heroHeight = $heroSection.length ? $heroSection.outerHeight() : window.innerHeight;
-        const isInHero = scrollY < heroHeight * 0.7;
+        const isScrolled = scrollY > 50;
 
-        if (isInHero) {
+        $header.toggleClass('scrolled', isScrolled);
+
+        if (scrollY <= 50) {
+            // Always visible and transparent at top of page
+            $header.removeClass('is-hidden gallery-hidden');
+        } else if (delta < -4) {
+            // Reveal immediately on scroll up
+            $header.removeClass('is-hidden gallery-hidden');
+        } else if (delta > 8 && scrollY > 350) {
+            // Smoothly tuck away on downward reading scroll
             $header.addClass('is-hidden');
-        } else {
-            const hideOnDirection = delta > 2;
-            const showOnDirection = delta < -2;
-
-            if (hideOnDirection) {
-                $header.removeClass('is-hidden');
-            } else if (showOnDirection) {
-                $header.removeClass('is-hidden');
-            }
         }
-
-        const gallerySection = $('.feature-gallery-section').first().get(0);
-        let isInGallery = false;
-        if (gallerySection) {
-            const rect = gallerySection.getBoundingClientRect();
-            // Header should hide as long as the gallery section is taking up the screen
-            isInGallery = rect.top <= 50 && rect.bottom >= window.innerHeight * 0.1;
-        }
-
-        if (isInHero || isInGallery) {
-            $header.addClass('is-hidden').removeClass('scrolled');
-            
-            if (isInGallery) {
-                $header.addClass('gallery-hidden');
-            } else {
-                $header.removeClass('gallery-hidden');
-            }
-            
-            lastHeaderScrollY = scrollY;
-            return;
-        }
-
-        $header.removeClass('is-hidden gallery-hidden');
-        $header.toggleClass('scrolled', scrollY > 50);
 
         lastHeaderScrollY = scrollY;
     }
@@ -633,7 +614,7 @@ $(document).ready(function () {
                 $status
                     .removeClass('is-loading is-success')
                     .addClass('is-error')
-                    .html(response && response.message ? response.message : 'Unable to submit your enquiry right now.');
+                    .html(response && response.message ? response.message : (isSpanishPage ? 'No se pudo procesar la solicitud en este momento.' : 'Unable to submit your enquiry right now.'));
                 return;
             }
 
@@ -641,7 +622,7 @@ $(document).ready(function () {
             if (response.booking) {
                 $('#voucherCode').text(response.booking.booking_code);
                 $('#voucherGuest').text(response.booking.guest_name);
-                $('#voucherRoom').text(response.booking.room_type);
+                $('#voucherRoom').text(response.booking.room_type + (response.booking.room_number ? ' · Habitación ' + response.booking.room_number : ''));
                 $('#voucherDates').html(response.booking.check_in + ' &rarr; ' + response.booking.check_out + ' (' + response.booking.nights + ' noches)');
                 $('#voucherTotal').text('$' + response.booking.total_price + ' USD');
 
@@ -659,9 +640,9 @@ $(document).ready(function () {
             $status
                 .removeClass('is-loading is-error')
                 .addClass('is-success')
-                .html(response.message || 'Thank you. Your enquiry has been sent successfully.');
+                .html(response.message || (isSpanishPage ? 'Gracias. Su solicitud ha sido enviada con éxito.' : 'Thank you. Your enquiry has been sent successfully.'));
         }).fail(function (xhr) {
-            let message = 'Unable to submit your enquiry right now.';
+            let message = isSpanishPage ? 'No se pudo procesar la solicitud en este momento.' : 'Unable to submit your enquiry right now.';
 
             if (xhr.responseJSON && xhr.responseJSON.message) {
                 message = xhr.responseJSON.message;
@@ -760,6 +741,32 @@ $(document).ready(function () {
 
         // Disparar primer cálculo
         updateStayCalculations();
+
+        // 3. Sincronización bidireccional con la Barra Flotante del Hero
+        const $heroIn = $('#heroCheckIn');
+        const $heroOut = $('#heroCheckOut');
+        const $heroRoom = $('#heroRoomType');
+        const $heroGuests = $('#heroGuests');
+
+        if ($heroIn.length) {
+            $heroIn.attr('min', formatDate(now)).val($checkIn.val());
+            $heroOut.attr('min', formatDate(tomorrow)).val($checkOut.val());
+            if ($heroRoom.length) $heroRoom.val($roomType.val());
+
+            $heroIn.on('change', function () {
+                $checkIn.val($(this).val()).trigger('change');
+            });
+            $heroOut.on('change', function () {
+                $checkOut.val($(this).val()).trigger('change');
+            });
+            $heroRoom.on('change', function () {
+                $roomType.val($(this).val()).trigger('change');
+            });
+            $heroGuests.on('change', function () {
+                const guests = parseInt($(this).val(), 10) || 2;
+                $('#res-adults').val(guests);
+            });
+        }
 
         // Botón "Reservar Otra"
         $('#btnBookAnother').on('click', function () {
@@ -966,4 +973,4 @@ $(window).on('load', () => {
 
 window.setTimeout(() => {
     hidePreloader();
-}, 3200);
+}, 1200);

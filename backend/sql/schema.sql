@@ -1,0 +1,103 @@
+-- ========================================================
+-- Hotel Ombara - Database Schema (MySQL / MariaDB)
+-- Archivo: backend/sql/schema.sql
+-- ========================================================
+
+CREATE DATABASE IF NOT EXISTS `hotel_ombara` 
+CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci;
+
+USE `hotel_ombara`;
+
+-- --------------------------------------------------------
+-- Tabla 1: Reservaciones (reservations)
+-- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `reservations` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `booking_code` VARCHAR(30) NOT NULL UNIQUE COMMENT 'Localizador único de reserva (ej: OMB-2026-X82A)',
+    `guest_name` VARCHAR(150) NOT NULL,
+    `guest_email` VARCHAR(150) NOT NULL,
+    `guest_phone` VARCHAR(50) NOT NULL,
+    `country` VARCHAR(100) DEFAULT 'Not Specified',
+    `room_type` VARCHAR(100) NOT NULL COMMENT 'Tipo de habitación seleccionada',
+    `room_id` INT NULL COMMENT 'Habitación física asignada automáticamente',
+    `room_rate` DECIMAL(10, 2) NOT NULL DEFAULT 0.00 COMMENT 'Precio por noche en USD',
+    `check_in` DATE NOT NULL,
+    `check_out` DATE NOT NULL,
+    `adults` INT NOT NULL DEFAULT 1,
+    `children` INT NOT NULL DEFAULT 0,
+    `total_nights` INT NOT NULL DEFAULT 1,
+    `total_price` DECIMAL(10, 2) NOT NULL DEFAULT 0.00,
+    `payment_method` ENUM('cash', 'debit_card', 'credit_card', 'bank_transfer', 'online') DEFAULT NULL,
+    `payment_status` ENUM('pending', 'paid') NOT NULL DEFAULT 'pending',
+    `special_requests` TEXT NULL,
+    `status` ENUM('confirmed', 'pending', 'cancelled') NOT NULL DEFAULT 'confirmed',
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    INDEX `idx_booking_code` (`booking_code`),
+    INDEX `idx_dates` (`check_in`, `check_out`),
+    INDEX `idx_reservation_room_dates` (`room_id`, `check_in`, `check_out`),
+    INDEX `idx_email` (`guest_email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+-- Usuarios administrativos y de recepción
+-- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `users` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(150) NOT NULL,
+    `email` VARCHAR(190) NOT NULL UNIQUE,
+    `phone` VARCHAR(50) DEFAULT NULL,
+    `whatsapp_number` VARCHAR(30) DEFAULT NULL,
+    `role` ENUM('admin', 'receptionist') NOT NULL DEFAULT 'receptionist',
+    `password_hash` VARCHAR(255) NOT NULL,
+    `is_active` TINYINT(1) NOT NULL DEFAULT 1,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    INDEX `idx_users_role_active` (`role`, `is_active`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `notification_logs` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `reservation_id` INT NOT NULL,
+    `channel` ENUM('email', 'whatsapp') NOT NULL,
+    `recipient` VARCHAR(190) NOT NULL,
+    `delivery_status` ENUM('sent', 'failed', 'skipped') NOT NULL,
+    `error_code` VARCHAR(80) DEFAULT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    INDEX `idx_notification_reservation` (`reservation_id`, `channel`, `delivery_status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+-- Inventario operativo de habitaciones
+-- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `rooms` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `room_number` VARCHAR(20) NOT NULL UNIQUE,
+    `room_type` VARCHAR(100) NOT NULL,
+    `status` ENUM('available', 'occupied', 'maintenance', 'cleaning') NOT NULL DEFAULT 'available',
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+-- Tabla 2: Membresías y Consultas (memberships)
+-- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `memberships` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `full_name` VARCHAR(150) NOT NULL,
+    `email` VARCHAR(150) NOT NULL,
+    `phone` VARCHAR(50) NOT NULL,
+    `country` VARCHAR(100) DEFAULT 'Not Specified',
+    `source_page` VARCHAR(100) DEFAULT 'index.html',
+    `status` ENUM('active', 'pending') NOT NULL DEFAULT 'active',
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    INDEX `idx_member_email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+-- Datos Semilla de Demostración
+-- --------------------------------------------------------
+INSERT INTO `reservations` 
+(`booking_code`, `guest_name`, `guest_email`, `guest_phone`, `country`, `room_type`, `room_rate`, `check_in`, `check_out`, `adults`, `children`, `total_nights`, `total_price`, `special_requests`, `status`) 
+VALUES
+('OMB-2026-A101', 'Alejandro Morales', 'alejandro@example.com', '+52 55 1234 5678', 'México', 'Suite Vista al Océano', 220.00, CURDATE() + INTERVAL 5 DAY, CURDATE() + INTERVAL 9 DAY, 2, 0, 4, 880.00, 'Piso alto con vista al atardecer', 'confirmed'),
+('OMB-2026-B202', 'Sofía Valenzuela', 'sofia@example.com', '+34 612 345 678', 'España', 'Villa Privada Jardín', 180.00, CURDATE() + INTERVAL 12 DAY, CURDATE() + INTERVAL 15 DAY, 2, 1, 3, 540.00, 'Cuna para bebé requerida', 'confirmed')
+ON DUPLICATE KEY UPDATE `id`=`id`;
